@@ -1,0 +1,60 @@
+{
+  "name": "qb64-language",
+  "displayName": "QB64/QB64PE",
+  "description": "Syntax highlighting for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files)",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "license": "MIT",
+  "publisher": "GeorgeMcGinn",
+  "keywords": [
+    "QB64",
+    "QB64PE",
+    "QB64 PE",
+    "QB64PE Phoenix Edition",
+    "QBasic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeorgeMcGinn/qb64-vscode"
+  },
+  "icon": "images/qb64.ico",
+  "files": [
+    "images/**/*.png",
+    "extension.js",
+    "qb64-language-configuration.json",
+    "syntaxes/**",
+    "themes/**"
+  ],
+  "main": "extension.js",
+    "activationEvents": ["onLanguage:qb64", "workspaceContains:**/*.{bas,bi,bm,inc}"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "qb64",
+        "aliases": ["QB64", "QB64pe", "QBasic"],
+        "extensions": [".bas", ".bi", ".bm", ".inc"],
+        "configuration": "./qb64-language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "qb64",
+        "scopeName": "source.basic.qb64",
+        "path": "./syntaxes/qb64.tmlanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "QB64 Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/qb64-color-theme.json"
+      }
+    ]
+  },
+  "dependencies": {}
+}

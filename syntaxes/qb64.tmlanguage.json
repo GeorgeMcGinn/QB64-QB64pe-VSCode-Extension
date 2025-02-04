@@ -1,0 +1,470 @@
+{
+	"name": "qb64-language",
+	"scopeName": "source.basic.qb64",
+	"patterns": [
+	  {"include": "#metacommands"},
+  	  {
+		"name": "comment.line.qb64",
+		"match": "(?i)(?:'|(?<!:)\\bREM\\b).*"
+	  },
+	  {
+		"name": "comment.line.inline.qb64",
+		"match": "(?i)(?:'|(?<!:)\\bREM\\b).*"
+	  },
+	  {
+		"name": "comment.line.after-label.qb64",
+		"match": "(?i)(?<=:)\\s*(?:'|\\bREM\\b).*"
+	  },
+	  {
+		"match": "\\s*:\\s*",
+		"name": "punctuation.separator.qb64"
+	  },
+	  {"include": "#round-brackets"},
+	  {"include": "#screen-processing"},
+	  {"include": "#file-processing"},
+	  {"include": "#string-processing"},
+	  {"include": "#control-keyword-processing"},
+	  {"include": "#keyword-processing"},
+	  {"include": "#graphics-keywords"},
+	  {"include": "#number-processing" },
+	  {"include": "#openGL-graphics-keywords"},
+	  {"include": "#other-keywords"},
+	  {
+		"name": "string.quoted.double.qb64",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.qb64",
+			"match": "\"\""
+		  }
+		]
+	  },
+	  {
+		"name": "constant.numeric.hexadecimal.qb64",
+		"match": "(?i)\\b0[xX][0-9a-fA-F]+\\b"
+	  },
+	  {
+		"name": "constant.numeric.qb64",
+		"match": "(?i)-?\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eEdD][+-]?[0-9]+)?(L|l|UL|ul|u|U|F|f)?\\b"
+	  },
+	  {
+		"match": "(?i)\\b(IF|THEN|ELSE|ELSEIF|ELSE IF|END IF|GOTO|GOSUB|RUN|CALL)\\b",
+		"name": "keyword.control.conditional.qb64"
+	  },
+	  {
+		"match": "(?i)(?<![\\w_])(AND|OR|NOT|XOR)(?![\\w_])",
+		"name": "keyword.control.logical.qb64"
+	  },	  
+	  {
+		"begin": "(?i)\\b(IF|WHILE|FOR)\\b",
+		"end": "(?i)(THEN|WEND|NEXT|TO|:)",
+		"beginCaptures": { "1": { "name": "keyword.control.qb64" } },
+		"endCaptures": { "1": { "name": "keyword.control.qb64" } },
+		"patterns": [
+		  {
+			"match": "(?i)\\b(AND|OR|NOT|XOR)\\b",
+			"name": "keyword.control.logical.qb64"
+		  },
+		  { "include": "#file-processing" },
+		  { "include": "#string-processing" }
+		]
+	  },
+	  {
+		"begin": "(?i)\\b(DO)\\b",
+		"end": "(?i)\\b(LOOP(\\s+WHILE|\\s+UNTIL)?)\\b",
+		"beginCaptures": { "1": { "name": "keyword.control.qb64" } },
+		"endCaptures": { "1": { "name": "keyword.control.qb64" } },
+		"patterns": [
+		  { "include": "#round-brackets" },
+		  { "include": "#file-processing" },
+		  { "include": "#string-processing" },
+		  { "include": "#graphics-keywords" },
+		  { "include": "#openGL-graphics-keywords" },
+		  { "include": "#other-keywords" },
+		  { "include": "#metacommands" },
+		  {
+			"match": "\\s*:\\s*",
+			"name": "punctuation.separator.qb64"
+		  },
+		  {
+			"match": "(?i)\\b(IF|THEN|ELSE|ELSEIF|ELSE IF|END IF|FOR|NEXT|TO)\\b",
+			"name": "keyword.control.conditional.qb64"
+		  },
+		  {
+			"match": "(?i)\\b(AND|OR|NOT|XOR)\\b",
+			"name": "keyword.control.logical.qb64"
+		  },
+		  {
+			"name": "comment.line.qb64",
+			"match": "(?i)(?:'|(?<!:)\\bREM\\b).*"
+		  }
+		]
+	  },
+	  
+	  {
+		"match": "\\s*:\\s*",
+		"name": "punctuation.separator.qb64"
+	  },
+	  {
+		"match": "(?i)(\\$DYNAMIC|\\$STATIC|OPTION _EXPLICITARRAY|OPTION _EXPLICIT|\\$RESIZE:|\\$ASSERTS:CONSOLE|\\$ASSERTS|\\$NOPREFIX|\\$CHECKING|\\$COLOR|\\$CONSOLE:ONLY|\\$CONSOLE|\\$DEBUG|\\$ERROR|\\$EXEICON|\\$LET|\\$IF|\\$ELSEIF|\\$ELSE|\\$END IF|\\$SCREENHIDE|\\$SCREENSHOW|\\$VIRTUALKEYBOARD|\\$VERSIONINFO:COMMENTS|\\$VERSIONINFO:COMPANYNAME|\\$VERSIONINFO:FILEDESCRIPTION|\\$VERSIONINFO:FILEVERSION|\\$VERSIONINFO:INTERNALNAME|\\$VERSIONINFO:LEGALCOPYRIGHT|\\$VERSIONINFO:LEGALTRADEMARKS|\\$VERSIONINFO:ORIGINALFILENAME|\\$VERSIONINFO:PRODUCTNAME|\\$VERSIONINFO:PRODUCTVERSION|\\$VERSIONINFO:WEB|\\$UNSTABLE(:MIDI)?(:HTTP)?|\\$MIDISOUNDFONT|\\$EMBED)",
+		"name": "metacommand.qb64"
+	  },
+	  {
+		"match": "(?i)\\b(ENVIRON|_OS|_DEVICE|_EMBEDDED)(?=\\$)\\$",
+		"name": "metavariable.qb64"
+	  },
+	  {
+		"name": "metavariable.qb64",
+		"match": "(?i)(\\b(WIN|WINDOWS|LINUX|MAC|MACOSX|32BIT|64BIT|VERSION|ENVIRON|_QB64PE_|_ASSERTS_|_ASSERT|_CONSOLE_|_DEBUG_|_EXPLICIT_|_EXPLICITARRAY_)\\b)"
+	  },
+	  {
+		"match": "(?i)(\\b(BEEP|PLAY|SOUND|_SNDOPEN|_SNDCLOSE|_SNDPLAY|_SNDSTOP|_SNDPAUSE|_SNDLOOP|_SNDLIMIT|_SNDSETPOS|_SNDGETPOS|_SNDPLAYING|_SNDPAUSED|_SNDCOPY|_SNDPLAYCOPY|_SNDBAL|_SNDLEN|_SNDVOL|_SNDPLAYFILE|_SNDRAW|_SNDRATE|_SNDRAWLEN|_SNDNEW|_SNDOPENRAW|_SNDRAWBATCH|_SNDRAWDONE|_MIDISOUNDBANK|_WAVE|\\.SIZE|\\.ELEMENTSIZE|\\.TYPE|\\.SOUND|\\.OFFSET|\\.IMAGE)\\b)",
+		"name": "sound.qb64"
+	  },
+	  {
+		"name": "storage.type.qb64",
+		"match": "(?i:\\b(CONVERSIONS|DATE|DATEADD|DATEDIFF|DATEPART|DATESERIAL|DATEVALUE|DAY|DERIVED|ESCAPE|FILTER|GETREF|HOUR|INPUTBOX|INSTR|INSTRREV|INT|FIX|ISDATE|ISNULL|ITEM|ITEMS|JOIN|KEYS|LBOUND|LCASE|LEFT|LEN|LOADPICTURE|MID|MINUTE|MONTH|MONTHNAME|RGB|_RGB|_RGBA|RGBA|RIGHT|RND|ROUND|SCRIPTENGINE|SCRIPTENGINEBUILDVERSION|SCRIPTENGINEMAJORVERSION|SCRIPTENGINEMINORVERSION|SECOND|SETLOCALE|SGN|SIN|SQR|STRCOMP|STRREVERSE|TIMESERIAL|TIMEVALUE|TYPENAME|UBOUND|UNESCAPE|WEEKDAY|WEEKDAYNAME)\\b)"
+	  },
+	  {
+		"name": "math.functions.qb64",
+ 		 "match": "(?i)\\b(ADD|ASC|ATN|CDBL|CINT|CLNG|COS|CSNG|EXP|ISNUMERIC|LOG|TAN|_ADLER32|_CRC32|_ACOS|_ACOSH|_ARCCOT|_ARCCSC|_ARCSEC|_ASIN|_ASINH|_ATAN2|_ATANH|_CEIL|_CLAMP|_COT|_COTH|_COSH|_CSC|_CSCH|_D2G|_D2R|_G2D|_G2R|_HYPOT|_MAX|_MIN|_PI|_R2D|_R2G|_ROUND|_SEC|_SECH|_SHL|_SHR|_SINH|_ROR|_ROL|EQV|IMP|VAL|ABS|_TANH)\\b"
+	  },
+	  {
+		"match": "(?i)\\b(STRING|INTEGER|LONG|_INTEGER64|_BIT|_BYTE|SINGLE|DOUBLE|_FLOAT|_OFFSET|_MEM|_UNSIGNED|_CAST|_ENVIRONCOUNT)\\b",
+		"name": "number.storage.type.qb64"
+	  },
+	  {
+		"match": "(?i)\\b(HEX|HEX32|OCT|_BIN|_BASE64DECODE|_BASE64ENCODE|_INFLATE|_DEFLATE|_MD5)(?=\\$)\\$",
+		"name": "number.processing.qb64"
+	  },
+	  {
+		"name": "number.processing.qb64",
+ 		"match": "(?i)\\b(_READBIT|_RESETBIT|_SETBIT|_TOGGLEBIT)\\b"
+	  },
+	  {
+		"name": "error.processing.qb64",
+		"match": "(?i)\\b(_INCLERRORFILE)(?=\\$)\\$"	
+	  },
+	  {
+		"match": "(?i)\\b(ERL|ERR|ON|ON ERROR RESUME NEXT|ON ERROR GOTO|ERROR|_ERRORMESSAGE|ERRORMESSAGE|ERRORLINE|_ERRORLINE|_INCLERRORFILE|INCLERRORFILE|ON KEY|_INCLERRORLINE|_LOGERROR|_LOGINFO|_LOGMINLEVEL|_LOGTRACE|_LOGWARN)\\b",
+		"name": "error.processing.qb64"
+	  },
+	  {
+		"match": "(?i)\\b(_NEWIMAGE|_LOADIMAGE|_PUTIMAGE|_FREEIMAGE|_SAVEIMAGE|_MAPTRIANGLE|_COLORCHOOSERDIALOG|_DEPTHBUFFER|_ICON|_PRINTIMAGE|_SOURCE)\\b",
+		"name": "image.processing.qb64"
+	  },
+	  {
+		"name": "memory.qb64",
+		"match": "(?i)\\b(PEEK|POKE|INP|OUT|SADD|VARSEG|VARPTR|ABSOLUTE|INTERRUPTX|INTERRUPT|_MEMSOUND|_MEMFREE|_MEMCOPY|_MEMELEMENT|_MEMEXISTS|_MEMFILL|_MEMGET|_MEMGET|_MEMIMAGE|_MEMNEW|_MEMPUT)\\b"
+	  },
+	  {	
+		"name": "tcpip.network.qb64",
+		"match": "(?i)\\b(_CONNECTIONADDRESS|_ENCODEURL|_DECODEURL)(?=\\$)\\$"	
+	  },
+	  {
+		"name": "tcpip.network.qb64",
+		"match": "(?i)\\b(_OPENCLIENT|_OPENHOST|_OPENCONNECTION|_CONNECTED|_CONNECTIONADDRESS|LOC|_STATUSCODE)\\b"
+	  },
+      {
+		"name": "device.processing.qb64",
+		"match": "(?i)\\b(_MOUSEINPUT|_WHEEL|_MOUSEX|_MOUSEBUTTON|_MOUSEHIDE|_MOUSEHIDDEN|_MOUSEMOVE|_MOUSEMOVEMENTX|_MOUSEMOVEMENTY|_MOUSESHOW|_MOUSEWHEEL|_MOUSEY|_DEVICEINPUT|_DEVICES|_LASTBUTTON|_LASTAXIS|_LASTWHEEL|_BUTTON|_BUTTONCHANGE|_AXIS|_CAPSLOCK|_SCROLLLOCK|_NUMLOCK)\\b"
+	  },
+	  {
+	  "captures": 
+		{"1": {"name": "punctuation.definition.variable.qb64"},
+		"2": {"name": "support.function.qb64"} }
+	  },
+	  {
+		"match": "(?i)\\b(LOCK|ACCESS|UNLOCK|SETABORT|SETCOMPLETE|BINARYREAD|ADDHEADER|APPENDTOLOG|BINARYWRITE|CLEAR|ERASE|END|FLUSH|REDIRECT|HTMLENCODE|MAPPATH|URLENCODE|ABANDON|CONVERT|REGEX)\\b",
+		"name": "support.function.qb64"
+	  },
+    {
+		"name": "variable.other.qb64",
+		"match": "(?i)\\b[a-zA-Z_][a-zA-Z0-9_]*\\$?\\d*\\b"
+	},
+	{
+	  "match": "\\b\\w+\\s+as\\s+\\w+\\b(?!\\s*\\))",
+	  "name": "support.type.qb64"
+	}
+	],
+	"repository": {
+
+		"round-brackets": {
+		  "begin": "\\(",
+		  "beginCaptures": {
+			"0": {
+			  "name": "punctuation.section.round-brackets.begin.qb64"
+			}
+		  },
+		  "end": "\\)",
+		  "endCaptures": {
+			"0": {
+			  "name": "punctuation.section.round-brackets.end.qb64"
+			}
+		  },
+		  "name": "meta.round-brackets",
+		  "patterns": [
+			{
+			  "include": "source.qb64"
+			}
+		  ]
+		},
+
+		"number-processing": {
+		"patterns": [
+			{
+				"name": "constant.numeric.qb64",
+				"match": "\\b\\d+(\\.\\d+)?\\b"
+			},
+			{
+				"name": "constant.numeric.hexadecimal.qb64",
+				"match": "&H[0-9A-Fa-f]+\\b"
+			},
+			{
+				"name": "constant.numeric.binary.qb64",
+				"match": "&B[0-9A-Fa-f]+\\b"
+			},
+			{
+				"name": "constant.numeric.octal.qb64",
+				"match": "&O[0-9A-Fa-f]+\\b"
+			},
+			{
+				"name": "numeric.conversions.qb64",
+				"match": "(?i)\\b(MKI|MKL|MKS|MKD|_MK|MKDMBF|MKSMBF)(?=\\$)\\$"
+			},
+			{
+				"name": "numeric.conversions.qb64",
+				"match": "(?i)\\b(_CV|CVL|MK|CVI|CVD|CVS|CVDMBF|CVSMBF)\\b"
+			}
+			]
+		},
+
+		"metacommands": {
+		  "patterns": [
+			{
+			  "name": "metacommand.qb64",
+			  "match": "(?i)\\$(DYNAMIC|STATIC|RESIZE:.*?|ASSERTS(:CONSOLE)?|NOPREFIX|CHECKING|INCLUDEONCE)"
+			},
+			{
+			  "name": "metacommand.versioninfo.qb64",
+			  "match": "(?i)\\$(VERSIONINFO:(COMMENTS|COMPANYNAME|FILEDESCRIPTION|FILEVERSION|INTERNALNAME|LEGALCOPYRIGHT|LEGALTRADEMARKS|ORIGINALFILENAME|PRODUCTNAME|PRODUCTVERSION|WEB))"
+			},
+			{
+			  "name": "metacommand.unstable.qb64",
+			  "match": "(?i)\\$(UNSTABLE(:MIDI)?(:HTTP)?)"
+			},
+			{
+			  "name": "metacommand.include.qb64",
+			  "match": "(?i)\\'\\$(INCLUDE:).*"
+			}
+		  ]
+		},
+
+		"screen-processing": {
+		  "patterns": [
+			{
+				"name": "screen.qb64",
+				"match": "(?i)\\b(_INPUTBOX|_OPENFILEDIALOG|_SAVEFILEDIALOG)(?=\\$)\\$"
+			},
+			{
+				"name": "screen.qb64",
+				"match": "(?i)\\b(WIDTH|HEIGHT|PALETTE\\s+USING|PALETTE|PSET|PMAP|PCOPY|SCREEN|WINDOW|VIEW|_PALETTECOLOR|_DISPLAY|SCREENHIDE|_SCREENHIDE|_SCREENSHOW|_SCREENMOVE|_SCREENIMAGE|_MIDDLE|_DEST|_CONSOLE OFF|CONSOLE OFF|_CONSOLE ON|CONSOLE ON|_DEST _CONSOLE|DEST CONSOLE|_HSB32|_HSBA32|_HUE32|_SATURATION32|_BRIGHTNESS32|_RED32|_GREEN32|_BLUE32|_ALPHA32|_RGB32|_RGBA|_RGBA32|_ALPHA|_RED|_GREEN|_BLUE|_FONT|_FONTWIDTH|_FONTHEIGHT|_FREEFONT|_PRINTWIDTH|_SETALPHA|_DONTBLEND|_AUTODISPLAY|_RESIZE|_RESIZEHEIGHT|_RESIZEWIDTH|_ALLOWFULLSCREEN|_BLEND|_BLINK|_BACKGROUNDCOLOR|_CONSOLE|_CONSOLEINPUT|_CONSOLECURSOR|_CONSOLEFONT|_CONSOLETITLE|_COPYPALETTE|CSRLIN|_DEFAULTCOLOR|_FULLSCREEN|_INSTRREV|_MESSAGEBOX|_NOTIFYPOPUP|_SCREENX|_SCREENY|_SCREENICON|_SCREENPRINT|_SCREENCLICK|_SCREENEXISTS|WAIT|_WINDOWHANDLE|_WINDOWHASFOCUS)\\b"
+			}
+		  ]
+		},
+
+		"string-processing": {
+			"patterns": [
+				{
+				"name": "string.processing.qb64",
+				"match": "(?i)\\b(LTRIM|RTRIM|TRIM|RIGHT|LEFT|MID|LCASE|UCASE|__REMOVESPACE|_TRIM|CHR|STR|SPACE|INKEY|DATE|TIME|VARPTR|_CLIPBOARD|_TOSTR)(?=\\$)\\$"
+				},
+				{
+				"name": "string.processing.qb64",
+				"match": "(?i)\\b(STRING)(?=\\$)\\$"
+				},
+				{	
+				"name": "file.processing.qb64",
+				"match": "(?i)\\b(_CONTROLCHR|LSET|_PRINTSTRING|SWAP|_STRCMP|_STRICMP|SPC)\\b"	
+				}		
+			]
+			},
+					
+		"keyword-processing": {
+		"patterns": [
+			{
+			"name": "keyword.qb64",
+			"match": "(?i)\\b(SHELL|KILL|_HIDE|_DONTWAIT|COMMAND|INPUT|PRINT|WRITE|LPRINT|LPOS|_ECHO|_CV|ON TIMER|TIMER ON|_FREETIMER|FREE|_COMMANDCOUNT|COMMANDCOUNTCALLOS|TITLE|_TITLE|DECLARE|LIBRARY|DEF|SEG|RESUME|REST|TIMER|RANDOMIZE TIMER|CHAIN|DEFINT|DEFSNG|DEFDBL|DEFSTR|DEFLNG|CLS|CONST|STATIC|AS|_PRESERVE|PRESERVE|FUNCTION|END FUNCTION|SUB|END SUB|TITLE|TYPE|END TYPE|FIELD|RANDOMIZE|OPTION BASE|COLOR|GOTO|STRING_MEM|STOP|SYSTEM|MEM|LOCATE|_KEYCLEAR|KEYCLEAR|TAB|DIM|REDIM|COMMON|SHARED|STRIG|STICK|LET|GET|PUT|_DEFINE|DYNAMIC|CUSTOMTYPE|BYVAL|ALIAS|_CINP|_MAPUNICODE|_SHELLHIDE)\\b"
+		}
+		]
+		},
+
+		"keyword-control-logical": {
+			"patterns": [
+			  {
+				"name": "keyword.control.logical.qb64",
+				"match": "(?i)(?<![\\w_])(AND|OR|NOT|XOR)(?![\\w_])"
+			  }
+			]
+		  },
+		  
+		"control-keyword-processing": {
+			"patterns": [
+				{
+					"name": "keyword.control.qb64",
+					"match": "(?i)\\b(FOR\\b(?!\\s+(INPUT|OUTPUT|APPEND|BINARY|RANDOM))|WHILE|MOD|STEP|TO|EACH|CASE|SELECT|END SELECT|EXIT FUNCTION|RETURN|EXIT DO|EXIT WHILE|EXIT FOR|EXIT PROPERTY|EXIT SUB|CONTINUE|_CONTINUE|_EXIT|DO|UNTIL|LOOP|WITH|_IIF|_LIMIT|DELAY|_DELAY|SLEEP|KEY|LIST|OFF|_NEGATE|_ANDALSO|_ORELSE|_PRINTMODE)\\b"
+				},
+				{
+					"name": "keyword.control.qb64",
+					"match": "(?i)\\b(_LIMIT)\\s+(\\d+)\\b",
+					"captures": {
+					"1": { "name": "keyword.control.qb64" },
+					"2": { "name": "constant.numeric.qb64" }
+					}
+				},
+				{
+					"name": "keyword.exitcontrol.qb64",
+					"match": "(?i)\\b(EXIT|END SELECT|CONTINUE|_CONTINUE|_EXIT)\\b"
+				},
+				{
+					"name": "keyword.control.qb64",
+					"match": "(?i)\\b(WHILE|WEND|FOR|DO|LOOP|NEXT|UNTIL)\\b"
+				}
+			]
+		},
+
+		"file-processing": {
+		"patterns": [
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\bFOR\\s+INPUT\\s+AS\\b"
+			},
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\bFOR\\s+OUTPUT\\s+AS\\b"
+			},
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\bFOR\\s+APPEND\\s+AS\\b"
+			},
+			{
+				"name": "file.processing.qb64",
+				"match": "(?i)\\bFOR\\s+BINARY\\s+AS\\b"
+			},
+			{
+				"name": "file.processing.qb64",
+				"match": "(?i)\\bFOR\\s+RANDOM\\s+AS\\b"
+			},
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\bLINE\\s+INPUT\\b"
+			},
+			{
+				"name": "file.processing.qb64",
+				"match": "(?i)\\bINPUT\\b"
+			},
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\b(DATA|RESTORE|FILES|READ|OPEN|CLOSE|SEEK|NAME|RESET|FREEFILE|FILEEXISTS|_FILEEXISTS|_DIREXISTS|USING|EOF|LOF|_ACCEPTFILEDROP|_TOTALDROPPEDFILES|_DROPPEDFILE|_FINISHDROP|CHDIR|RMDIR|_WRITEFILE)\\b"
+			},
+			{
+				"name": "file.processing.qb64",
+				"match": "(?i)\\bEOF\\s*\\(\\s*(\\d+)\\s*\\)\\b",
+				"captures": {
+				  "1": { "name": "constant.numeric.qb64" }
+				}
+			},			
+			{
+			"name": "file.processing.qb64",
+			"match": "(?i)\\bFOR\\s+INPUT\\s+AS\\b"
+			},
+			{	
+			"name": "file.processing.qb64",
+			"match": "(?i)\\b(_CWD|STARTDIR|_DIR|_FULLPATH|_STARTDIR|_FILES|_READFILE|_SELECTFOLDERDIALOG)(?=\\$)\\$"	
+			}		
+		]	
+		},
+
+		"graphics-keywords": {
+			"patterns": [
+				{
+				"name": "graphics.qb64",
+				"match": "(?i)\\b(PRESET|DRAW|CIRCLE|PAINT|POINT|BLOAD|BSAVE|LINE)(?![\\w$])\\b"
+				}
+			]
+		},
+
+		"other-keywords": {
+			"patterns": [
+				{
+				"name": "other.graphics.qb64",
+				"match": "(?i)\\b(_WIDTH|_HEIGHT|_SEAMLESS|_CLOCKWISE|_ANTICLOCKWISE|_SMOOTH|_SMOOTHSTRETCHED|_SMOOTHSHRUNK|_DESKTOPWIDTH|_DESKTOPHEIGHT|_PIXELSIZE|_PRINTWIDTH|_UPRINTSTRING|_UPRINTWIDTH|UPRINTWIDTH|_UFONTHEIGHT|_ULINESPACING|_UCHARPOS|_LOADFONT|_SAVEIMAGE|_COPYIMAGE|_PALETTECOLOR|_KEYDOWN|POS|_CLEARCOLOR|_CLIP|_CLIPBOARDIMAGE)\\b"
+				}
+			]
+		},
+
+
+		"openGL-graphics-keywords": {
+			"patterns": [
+				{
+				"name": "opengl.metacommands.qb64",
+				"match": "(?i)\\b(_BEHIND|_ONTOP|_ONLY|_DISPLAYORDER|_GLRENDER|_SOFTWARE|_HARDWARE|_HARDWARE1|_KEYHIT)\\b"
+				},
+				{
+					"name": "opengl.state.qb64",
+					"match": "(?i)\\b(_glenable|_gldisable|_glenableclientstate|_gldisableclientstate|_glisenabled|_glislist|_glistexture|_glgetbooleanv|_glgetintegerv|_glgetfloatv|_glgetdoublev|_glgeterror|_glgetstring|_glgetlightfv|_glgetlightiv|_glgetmaterialfv|_glgetmaterialiv|_glgetclipplane|_glgetmapdv|_glgetmapfv|_glgetmapiv|_glgetpointerv|_glfinish|_glflush)\\b"
+					},
+					{
+					"name": "opengl.buffer.qb64",
+					"match": "(?i)\\b(_glclear|_glclearaccum|_glclearcolor|_glcleardepth|_glclearindex|_glclearstencil|_glaccum|_gldrawbuffer|_glreadbuffer|_glreadpixels|_glfeedbackbuffer|_glselectbuffer)\\b"
+					},
+					{
+					"name": "opengl.vertex.qb64",
+					"match": "(?i)\\b(_glbegin|_glend|_glvertex2d|_glvertex2dv|_glvertex2f|_glvertex2fv|_glvertex2i|_glvertex2iv|_glvertex2s|_glvertex2sv|_glvertex3d|_glvertex3dv|_glvertex3f|_glvertex3fv|_glvertex3i|_glvertex3iv|_glvertex3s|_glvertex3sv|_glvertex4d|_glvertex4dv|_glvertex4f|_glvertex4fv|_glvertex4i|_glvertex4iv|_glvertex4s|_glvertex4sv|_glvertexpointer|_gldrawarrays|_gldrawelements|_glinterleavedarrays)\\b"
+					},
+					{
+					"name": "opengl.color.qb64",
+					"match": "(?i)\\b(_glcolor3b|_glcolor3bv|_glcolor3d|_glcolor3dv|_glcolor3f|_glcolor3fv|_glcolor3i|_glcolor3iv|_glcolor3s|_glcolor3sv|_glcolor3ub|_glcolor3ubv|_glcolor3ui|_glcolor3uiv|_glcolor3us|_glcolor3usv|_glcolor4b|_glcolor4bv|_glcolor4d|_glcolor4dv|_glcolor4f|_glcolor4fv|_glcolor4i|_glcolor4iv|_glcolor4s|_glcolor4sv|_glcolor4ub|_glcolor4ubv|_glcolor4ui|_glcolor4uiv|_glcolor4us|_glcolor4usv|_glcolormask|_glcolormaterial|_glcolorpointer)\\b"
+					},
+					{
+					"name": "opengl.texture.qb64",
+					"match": "(?i)\\b(_glbindtexture|_glteximage1d|_glteximage2d|_gltexsubimage1d|_gltexsubimage2d|_glcopyteximage1d|_glcopyteximage2d|_glcopytexsubimage1d|_glcopytexsubimage2d|_gltexcoord1d|_gltexcoord1dv|_gltexcoord1f|_gltexcoord1fv|_gltexcoord1i|_gltexcoord1iv|_gltexcoord1s|_gltexcoord1sv|_gltexcoord2d|_gltexcoord2dv|_gltexcoord2f|_gltexcoord2fv|_gltexcoord2i|_gltexcoord2iv|_gltexcoord2s|_gltexcoord2sv|_gltexcoord3d|_gltexcoord3dv|_gltexcoord3f|_gltexcoord3fv|_gltexcoord3i|_gltexcoord3iv|_gltexcoord3s|_gltexcoord3sv|_gltexcoord4d|_gltexcoord4dv|_gltexcoord4f|_gltexcoord4fv|_gltexcoord4i|_gltexcoord4iv|_gltexcoord4s|_gltexcoord4sv|_gltexcoordpointer|_gltexenvf|_gltexenvfv|_gltexenvi|_gltexenviv|_gltexgend|_gltexgendv|_gltexgenf|_gltexgenfv|_gltexgeni|_gltexgeniv|_gltexparameterf|_gltexparameterfv|_gltexparameteri|_gltexparameteriv|_glgentextures|_gldeletetextures|_glaretexturesresident)\\b"
+					},
+					{
+					"name": "opengl.matrix.qb64",
+					"match": "(?i)\\b(_glmatrixmode|_glloadidentity|_glloadmatrixd|_glloadmatrixf|_glmultmatrixd|_glmultmatrixf|_glpushmatrix|_glpopmatrix|_glrotated|_glrotatef|_glscaled|_glscalef|_gltranslated|_gltranslatef|_glfrustum|_glortho|_glviewport)\\b"
+					},
+					{
+					"name": "opengl.lighting.qb64",
+					"match": "(?i)\\b(_gllightf|_gllightfv|_gllighti|_gllightiv|_gllightmodelf|_gllightmodelfv|_gllightmodeli|_gllightmodeliv|_glmaterialf|_glmaterialfv|_glmateriali|_glmaterialiv)\\b"
+					},
+					{
+					"name": "opengl.raster.qb64",
+					"match": "(?i)\\b(_glbitmap|_glrasterpos2d|_glrasterpos2dv|_glrasterpos2f|_glrasterpos2fv|_glrasterpos2i|_glrasterpos2iv|_glrasterpos2s|_glrasterpos2sv|_glrasterpos3d|_glrasterpos3dv|_glrasterpos3f|_glrasterpos3fv|_glrasterpos3i|_glrasterpos3iv|_glrasterpos3s|_glrasterpos3sv|_glrasterpos4d|_glrasterpos4dv|_glrasterpos4f|_glrasterpos4fv|_glrasterpos4i|_glrasterpos4iv|_glrasterpos4s|_glrasterpos4sv|_glpixelzoom|_glpixelstoref|_glpixelstorei|_glpixeltransferf|_glpixeltransferi|_glpixelmapfv|_glpixelmapuiv|_glpixelmapusv|_glcopypixels|_gldrawpixels)\\b"
+					},
+					{
+					"name": "opengl.depth.qb64",
+					"match": "(?i)\\b(_gldepthfunc|_gldepthmask|_gldepthrange|_glstencilfunc|_glstencilmask|_glstencilop)\\b"
+					},
+					{
+					"name": "opengl.eval.qb64",
+					"match": "(?i)\\b(_glevalcoord1d|_glevalcoord1dv|_glevalcoord1f|_glevalcoord1fv|_glevalcoord2d|_glevalcoord2dv|_glevalcoord2f|_glevalcoord2fv|_glevalmesh1|_glevalmesh2|_glevalpoint1|_glevalpoint2|_glmap1d|_glmap1f|_glmap2d|_glmap2f|_glmapgrid1d|_glmapgrid1f|_glmapgrid2d|_glmapgrid2f|_glnormal3b|_glnormal3bv|_glnormal3d|_glnormal3dv|_glnormal3f|_glnormal3fv|_glnormal3i|_glnormal3iv|_glnormal3s|_glnormal3sv|_glnormalpointer)\\b"
+					},
+					{
+					"name": "opengl.lists.qb64",
+					"match": "(?i)\\b(_glnewlist|_glendlist|_glcalllist|_glcalllists|_glgenlists|_gldeletelists|_gllistbase|_glinitnames|_glloadname|_glpushname|_glpopname)\\b"
+					},
+					{
+					"name": "opengl.misc.qb64",
+					"match": "(?i)\\b(_glrender|_glhint|_glindexd|_glindexdv|_glindexf|_glindexfv|_glindexi|_glindexiv|_glindexs|_glindexsv|_glindexub|_glindexubv|_glindexmask|_glindexpointer|_gllogicop|_glalphafunc|_glblendfunction|_glcullface|_glpolygonmode|_glpolygonoffset|_glpolygonstipple|_glscissor|_glshademodel|_glfogf|_glfogfv|_glfogi|_glfogiv|_glclipplane|_glgetpolygonstipple|_gllinestipple|_gllinewidth|_glpointsize|_glrendermode|_glrectd|_glrectdv|_glrectf|_glrectfv|_glrecti|_glrectiv|_glrects|_glrectsv|_glBlendFunc|_glFrontFace|_glGetPixelMapfv|_glGetPixelMapuiv|_glGetPixelMapusv|_glGetTexEnvfv|_glGetTexEnviv|_glGetTexGendv|_glGetTexGenfv|_glGetTexGeniv|_glGetTexImage|_glGetTexLevelParameterfv|_glGetTexLevelParameteriv|_glGetTexParameterfv|_glGetTexParameteriv)\\b"
+					},
+					{
+					"name": "opengl.clientstate.qb64",
+					"match": "(?i)\\b(_glpushattrib|_glpopattrib|_glpushclientattrib|_glpopclientattrib|_gledgeflag|_gledgeflagv|_gledgeflagpointer|_glarrayelement)\\b"
+					}
+				]
+			}
+		}
+	}
+	

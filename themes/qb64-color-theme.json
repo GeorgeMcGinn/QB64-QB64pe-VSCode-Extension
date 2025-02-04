@@ -1,0 +1,178 @@
+{
+  "name": "QB64 Theme",
+
+  "colors": {
+    "editor.background": "#010611", // Dark blue editor background
+    "editor.foreground": "#D4D4D4", // White text in the editor
+    "sideBar.background": "#010611", // Dark blue Explorer panel background
+    "sideBar.foreground": "#ffffff", // White text in the Explorer panel
+    "sideBarSectionHeader.background": "#010611",
+    "sideBarSectionHeader.foreground": "#ffffff",
+    "sideBarTitle.foreground": "#ffffff",
+    "list.activeSelectionBackground": "#010611",
+    "list.activeSelectionForeground": "#ffffff",
+    "list.hoverBackground": "#00264d",
+    "list.hoverForeground": "#ffffff",
+    "list.inactiveSelectionBackground": "#010611",
+    "list.inactiveSelectionForeground": "#ffffff"
+  },
+
+  "tokenColors": [   
+    {
+      "scope": [
+        "source.basic.qb64 keyword.qb64",
+        "source.basic.qb64 keyword.control.qb64",
+        "source.basic.qb64 support.function.qb64",
+        "source.basic.qb64 string.processing.qb64",
+        "source.basic.qb64 error.processing.qb64",
+        "source.basic.qb64 file.processing.qb64",
+        "source.basic.qb64 image.processing.qb64",
+        "source.basic.qb64 device.processing.qb64"
+      ],
+      "settings": {
+        "foreground": "#569CD6"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 screen.qb64"
+      ],
+      "settings": {
+        "foreground": "#23e4eb"
+      }
+    },
+    {
+      "scope": "source.basic.qb64 string.quoted.double.qb64",
+      "settings": {
+        "foreground": "#faaa4e"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 storage.type.qb64",
+        "source.basic.qb64 math.functions.qb64"
+      ],
+      "settings": {
+        "foreground": "#4EC9B0"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 graphics.qb64",
+        "source.basic.qb64 opengl.qb64",
+        "source.basic.qb64 other.graphics.qb64",
+        "source.basic.qb64 opengl.metacommands.qb64",
+        "source.basic.qb64 metavariable.qb64",
+        "source.basic.qb64 opengl.state.qb64",
+        "source.basic.qb64 opengl.buffer.qb64",
+        "source.basic.qb64 opengl.vertex.qb64",
+        "source.basic.qb64 opengl.color.qb64",
+        "source.basic.qb64 opengl.texture.qb64",
+        "source.basic.qb64 opengl.matrix.qb64",
+        "source.basic.qb64 opengl.lighting.qb64",
+        "source.basic.qb64 opengl.raster.qb64",
+        "source.basic.qb64 opengl.depth.qb64",
+        "source.basic.qb64 opengl.eval.qb64",
+        "source.basic.qb64 opengl.lists.qb64",
+        "source.basic.qb64 opengl.misc.qb64",
+        "source.basic.qb64 opengl.clientstate.qb64"      
+      ],
+      "settings": {
+        "foreground": "#f54129"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 sound.qb64"
+      ],
+      "settings": {
+        "foreground": "#f0b411"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 keyword.control.conditional.qb64",
+        "source.basic.qb64 keyword.control.logical.qb64",
+        "source.basic.qb64 keyword.control.qb64",
+        "source.basic.qb64 keyword.exitcontrol.qb64"
+      ],
+      "settings": {
+        "foreground": "#d611f0"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 constant.numeric.qb64",
+        "source.basic.qb64 constant.numeric.hexadecimal.qb64",
+        "source.basic.qb64 constant.numeric.binary.qb64",
+        "source.basic.qb64 constant.numeric.octal.qb64"
+       ],
+      "settings": {
+        "foreground": "#f7f441",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 debug.qb64"
+      ],
+      "settings": {
+        "foreground": "#f59324"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 userfunctions.qb64"
+      ],
+      "settings": {
+        "foreground": "#9eaa67"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 metacommand.qb64",
+        "source.basic.qb64 metacommand.versioninfo.qb64",
+        "source.basic.qb64 metacommand.unstable.qb64",
+        "source.basic.qb64 metacommand.include.qb64"
+      ],
+      "settings": {
+        "foreground": "#00ff2a"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 todo.qb64",
+        "source.basic.qb64 number.processing.qb64",
+        "source.basic.qb64 number.storage.type.qb64",
+        "source.basic.qb64 numeric.conversions.qb64"
+      ],
+      "settings": {
+        "foreground": "#84e9a6",
+        "fontStyle": "bold"
+      }
+    },
+
+    {
+      "scope": [
+        "source.basic.qb64 comment.line.qb64",
+        "source.basic.qb64 comment.line.inline.qb64",
+        "source.basic.qb64 comment.line.after-label.qb64",
+        "source.basic.qb64 comment.line.apostrophe.qb64"
+      ],
+      "settings": {
+        "foreground": "#416347",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "source.basic.qb64 tcpip.network.qb64",
+        "source.basic.qb64 memory.qb64"
+      ],
+      "settings": {
+        "foreground": "#f84040"
+      }
+    }
+   ]
+}
+
