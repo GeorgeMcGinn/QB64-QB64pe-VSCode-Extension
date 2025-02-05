@@ -1,7 +1,6 @@
 Original QBasic keywords
 These original QBasic keywords (with a few noted exceptions) will also work in all versions of QB64.
 A (QBasic)
-
     ABS (function) converts any negative numerical value to a positive value.
     ABSOLUTE (statement) is used to access computer interrupt registers.
     ACCESS (file statement) sets the read and write access of a file when opened.
@@ -16,7 +15,6 @@ A (QBasic)
 
 
 B (QBasic)
-
     BEEP (statement) creates an error sound of a fixed duration.
     (FOR BINARY AS) (file mode) creates or opens an existing file for read and write byte-wise access.
     BLOAD (statement) transfers the contents of a BINARY BSAVE file to a specific array.
@@ -25,7 +23,6 @@ B (QBasic)
 
 
 C (QBasic)
-
     CALL (statement) optional statement that sends the program to a SUB procedure. Requires parameters be enclosed in brackets(parenthesis).
     CALL ABSOLUTE (statement) is used to access computer interrupt registers.
     CASE (SELECT CASE condition) designates specific conditions in a SELECT CASE statement block.
@@ -57,7 +54,6 @@ C (QBasic)
 
 
 D (QBasic)
-
     DATA (statement) creates a line of fixed program information separated by commas.
     DATE$ (function) returns the present Operating System date string formatted as mm-dd-yyyy.
     DECLARE LIBRARY (QB64 statement block) declares a C++, SDL or Operating System SUB or FUNCTION to be used.
@@ -75,7 +71,6 @@ D (QBasic)
 
 
 E (QBasic)
-
     ELSE (IF...THEN statement) is used to direct program flow when no other condition is evaluated as true.
     ELSEIF (IF...THEN statement) is used with THEN to set alternate conditional evaluations.
     END (statement) sets the end of a program, sub-procedure, statement block, DECLARE LIBRARY or TYPE definition.
@@ -93,7 +88,6 @@ E (QBasic)
 
 
 F (QBasic)
-
     FIELD (statement) defines the variable sizes to be written or read from a file.
     FILES (statement) returns a list of files in the current directory path to the SCREEN.
     FIX (function) returns the rounded INTEGER value of a numerical value.
@@ -105,7 +99,6 @@ F (QBasic)
 
 
 G (QBasic)
-
     GET (file statement) reads a file sequencially or at a specific position and returns the value as the variable type used.
     GET (HTTP statement) reads the response of an HTTP request that was opened using _OPENCLIENT.
     GET (TCP/IP statement) reads a TCP/IP connection port to return a value.
@@ -115,12 +108,10 @@ G (QBasic)
 
 
 H (QBasic)
-
     HEX$ (function) returns the hexadecimal (base 16) STRING representation of the INTEGER part of any value.
 
 
 I (QBasic)
-
     IF...THEN (statement) a conditional block statement used control program flow.
     IMP (logic operator) is used to compare two numerical values bitwise.
     '$INCLUDE: 'include/endPROG.inc' ($INCLUDE) (metacommand) designates a text code library file to include with the program.
@@ -138,7 +129,6 @@ I (QBasic)
 
 
 K (QBasic)
-
     KEY n (statement) used with ON KEY(n) events to assign a "softkey" string to a key or create a user defined key.
     KEY(n) (statement) used with ON KEY(n) events to assign, enable, disable or suspend event trapping.
     KEY LIST (statement) lists the 12 Function key soft key string assignments going down left side of screen.
@@ -146,7 +136,6 @@ K (QBasic)
 
 
 L (QBasic)
-
     LBOUND (function) returns the lower boundary of the specified array.
     LCASE$ (function) returns the lower case value of a STRING.
     LEFT$ (function) returns the specified number of text characters from the left end of a STRING.
@@ -171,7 +160,6 @@ L (QBasic)
 
 
 M (QBasic)
-
     MID$ (function) returns a designated portion of a STRING.
     MID$ (statement) redefines existing characters in a STRING.
     MKD$ (function) returns an 8 byte ASCII string representation of a DOUBLE numerical value.
@@ -185,14 +173,12 @@ M (QBasic)
 
 
 N (QBasic)
-
     NAME (statement) names an existing file name AS a new file name.
     NEXT (statement) bottom end of a FOR...NEXT counter loop to returns to the start or a RESUME NEXT error.
     NOT (logical operator) inverts the value of a logic operation or returns True when a boolean evaluation is False.
 
 
 O (QBasic)
-
     OCT$ (function) returns the octal (base 8) STRING representation of the INTEGER part of any value.
     OFF (event statement) turns off all ON event checking.
     ON ERROR (statement) sets up and activates an error event checking procedure call. Use to avoid program errors.
@@ -211,7 +197,6 @@ O (QBasic)
 
 
 P (QBasic)
-
     PAINT (statement) fills an enclosed area of a graphics screen with a color until it encounters a specific colored border.
     PALETTE (statement) sets the Red, Green and Blue color attribute intensities using a RGB multiplier calculation.
     PALETTE USING (statement) sets the color intensity settings using a designated array.
@@ -235,7 +220,6 @@ P (QBasic)
 
 
 R (QBasic)
-
     FOR RANDOM AS (RANDOM) (file mode) creates a file or opens an existing file to read and write records of a set byte size.
     RANDOMIZE (statement) sets the random seed value for a specific sequence of random RND values.
     RANDOMIZE USING (QB64 statement) restarts the designated seed value's random sequence of values from the beginning.
@@ -255,7 +239,6 @@ R (QBasic)
 
 
 S (QBasic)
-
     SADD (function) returns the address of a STRING variable as an offset from the current data segment.
     SCREEN (function) can return the ASCII character code or color of the text at a text designated coordinate.
     SCREEN (statement) sets the display mode and size of the program window.
@@ -289,7 +272,6 @@ S (QBasic)
 
 
 T (QBasic)
-
     TAB (function) moves a designated number of columns on the screen.
     TAN (function) returns the ratio of SINe to COSine or tangent value of an angle measured in radians.
     THEN (IF...THEN keyword) must be used in a one line IF...THEN program flow statement.
@@ -300,7 +282,6 @@ T (QBasic)
     TYPE (definition) defines a variable type or file record that can include any STRING or numerical types.
 
 U (QBasic)
-
     UBOUND (function) returns the upper-most index number of a designated array.
     UCASE$ (function) returns an uppercase representation of a specified STRING.
     UNLOCK (statement) unlocks a designated file or portions of it.
@@ -308,7 +289,6 @@ U (QBasic)
 
 
 V (QBasic)
-
     VAL (function) returns the numerical value of a string number.
     VARPTR (function) returns the segment pointer address in memory.
     VARPTR$ (function) returns the string value of a numerical value in memory.
@@ -318,7 +298,6 @@ V (QBasic)
 
 
 W (QBasic)
-
     WAIT (statement) waits until a vertical retrace is started or a screen draw ends.
     WEND (statement) the bottom end of a WHILE...WEND loop.
     WHILE (condition) evaluates a DO...LOOP or WHILE...WEND condition until it is False.
@@ -330,7 +309,6 @@ W (QBasic)
 
 
 X (QBasic)
-
     XOR (boolean) (logic operator) is used to compare two numerical values bitwise.
 
 

@@ -409,7 +409,7 @@
 			"patterns": [
 				{
 				"name": "opengl.metacommands.qb64",
-				"match": "(?i)\\b(_BEHIND|_ONTOP|_ONLY|_DISPLAYORDER|_GLRENDER|_SOFTWARE|_HARDWARE|_HARDWARE1|_KEYHIT)\\b"
+				"match": "(?i)\\b(_BEHIND|_ONTOP|_ONLY|_DISPLAYORDER|_GLRENDER|_SOFTWARE|_HARDWARE|_HARDWARE1|_KEYHIT|_GL)\\b"
 				},
 				{
 					"name": "opengl.state.qb64",
@@ -457,7 +457,7 @@
 					},
 					{
 					"name": "opengl.misc.qb64",
-					"match": "(?i)\\b(_glrender|_glhint|_glindexd|_glindexdv|_glindexf|_glindexfv|_glindexi|_glindexiv|_glindexs|_glindexsv|_glindexub|_glindexubv|_glindexmask|_glindexpointer|_gllogicop|_glalphafunc|_glblendfunction|_glcullface|_glpolygonmode|_glpolygonoffset|_glpolygonstipple|_glscissor|_glshademodel|_glfogf|_glfogfv|_glfogi|_glfogiv|_glclipplane|_glgetpolygonstipple|_gllinestipple|_gllinewidth|_glpointsize|_glrendermode|_glrectd|_glrectdv|_glrectf|_glrectfv|_glrecti|_glrectiv|_glrects|_glrectsv|_glBlendFunc|_glFrontFace|_glGetPixelMapfv|_glGetPixelMapuiv|_glGetPixelMapusv|_glGetTexEnvfv|_glGetTexEnviv|_glGetTexGendv|_glGetTexGenfv|_glGetTexGeniv|_glGetTexImage|_glGetTexLevelParameterfv|_glGetTexLevelParameteriv|_glGetTexParameterfv|_glGetTexParameteriv)\\b"
+					"match": "(?i)\\b(_glrender|_glhint|_glindexd|_glindexdv|_glindexf|_glindexfv|_glindexi|_glindexiv|_glindexs|_glindexsv|_glindexub|_glindexubv|_glindexmask|_glindexpointer|_gllogicop|_glalphafunc|_glblendfunction|_glcullface|_glpolygonmode|_glpolygonoffset|_glpolygonstipple|_glscissor|_glshademodel|_glfogf|_glfogfv|_glfogi|_glfogiv|_glclipplane|_glgetpolygonstipple|_gllinestipple|_gllinewidth|_glpointsize|_glrendermode|_glrectd|_glrectdv|_glrectf|_glrectfv|_glrecti|_glrectiv|_glrects|_glrectsv|_glBlendFunc|_glFrontFace|_glGetPixelMapfv|_glGetPixelMapuiv|_glGetPixelMapusv|_glGetTexEnvfv|_glGetTexEnviv|_glGetTexGendv|_glGetTexGenfv|_glGetTexGeniv|_glGetTexImage|_glGetTexLevelParameterfv|_glGetTexLevelParameteriv|_glGetTexParameterfv|_glGetTexParameteriv|_glPassThrough|_gluPerspective|_glPrioritizeTextures)\\b"
 					},
 					{
 					"name": "opengl.clientstate.qb64",

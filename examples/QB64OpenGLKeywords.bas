@@ -4,7 +4,6 @@ All QB64 OpenGL keywords must use the underscore prefix as listed below.
     Important: see SUB _GL
 
 _glA (OpenGL)
-
     _glAccum (statement) operates on the accumulation buffer
     _glAlphaFunc (statement) enables your application to set the alpha test function.
     _glAreTexturesResident (function) determines whether specified texture objects are resident in texture memory.
@@ -12,7 +11,6 @@ _glA (OpenGL)
 
 
 _glB (OpenGL)
-
     _glBegin (statement) the _glBegin and _glEnd statements delimit the vertices of a primitive or a group of like primitives.
     _glBindTexture (statement) enables the creation of a named texture that is bound to a texture target
     _glBitmap (statement) draws a bitmap.
@@ -20,7 +18,6 @@ _glB (OpenGL)
 
 
 _glC (OpenGL)
-
     _glCallList (statement) executes a display list.
     _glCallLists (statement) executes a list of display lists.
     _glClear (statement) clears buffers to preset values.
@@ -74,7 +71,6 @@ _glC (OpenGL)
 
 
 _glD (OpenGL)
-
     _glDeleteLists (statement) deletes a contiguous group of display lists.
     _glDeleteTextures (statement) deletes named textures.
     _glDepthFunc (statement) specifies the value used for depth-buffer comparisons.
@@ -89,7 +85,6 @@ _glD (OpenGL)
 
 
 _glE (OpenGL)
-
     _glEdgeFlag (statement) flags edges as either boundary or nonboundary.
     _glEdgeFlagv (statement) flags edges as either boundary or nonboundary.
     _glEdgeFlagPointer (statement) defines an array of edge flags.
@@ -112,7 +107,6 @@ _glE (OpenGL)
 
 
 _glF (OpenGL)
-
     _glFeedbackBuffer (statement) controls feedback mode.
     _glFinish (statement) blocks until all OpenGL execution is complete.
     _glFlush (statement) forces execution of OpenGL functions in finite time.
@@ -125,7 +119,6 @@ _glF (OpenGL)
 
 
 _glG (OpenGL)
-
     _glGenLists (function) generates a contiguous set of empty display lists.
     _glGenTextures (statement) generates texture names.
     _glGetBooleanv (statement) returns the value or values of a selected parameter.
@@ -160,12 +153,10 @@ _glG (OpenGL)
 
 
 _glH (OpenGL)
-
     _glHint (statement) specifies implementation-specific hints.
 
 
 _glI (OpenGL)
-
     _glIndexMask (statement) controls the writing of individual bits in the color-index buffers.
     _glIndexPointer (statement) defines an array of color indexes.
     _glIndexd (statement) sets the current color index.
@@ -186,7 +177,6 @@ _glI (OpenGL)
 
 
 _glL (OpenGL)
-
     _glLightModelf (statement) sets lighting model parameters.
     _glLightModelfv (statement) sets lighting model parameters.
     _glLightModeli (statement) sets lighting model parameters.
@@ -206,7 +196,6 @@ _glL (OpenGL)
 
 
 _glM (OpenGL)
-
     _glMap1d (statement) defines a one-dimensional evaluator.
     _glMap1f (statement) defines a one-dimensional evaluator.
     _glMap2d (statement) defines a two-dimensional evaluator.
@@ -225,7 +214,6 @@ _glM (OpenGL)
 
 
 _glN (OpenGL)
-
     _glNewList (statement) the _glNewList and _glEndList statements create or replace a display list.
     _glNormal3b (statement) sets the current normal vector.
     _glNormal3bv (statement) sets the current normal vector.
@@ -241,12 +229,10 @@ _glN (OpenGL)
 
 
 _glO (OpenGL)
-
     _glOrtho (statement) multiplies the current matrix by an orthographic matrix.
 
 
 _glP (OpenGL)
-
     _glPassThrough (statement) places a marker in the feedback buffer.
     _gluPerspective (statement) sets up a perspective projection matrix.
     _glPixelMapfv (statement) sets up pixel transfer maps.
@@ -273,7 +259,6 @@ _glP (OpenGL)
 
 
 _glR (OpenGL)
-
     _glRasterPos2d (statement) specifies the raster position for pixel operations.
     _glRasterPos2dv (statement) specifies the raster position for pixel operations.
     _glRasterPos2f (statement) specifies the raster position for pixel operations.
@@ -314,7 +299,6 @@ _glR (OpenGL)
 
 
 _glS (OpenGL)
-
     _glScaled (statement) multiplies the current matrix by a general scaling matrix.
     _glScalef (statement) multiplies the current matrix by a general scaling matrix.
     _glScissor (statement) defines the scissor box.
@@ -326,7 +310,6 @@ _glS (OpenGL)
 
 
 _glT (OpenGL)
-
     _glTexCoord1d (statement) sets the current texture coordinates.
     _glTexCoord1dv (statement) sets the current texture coordinates.
     _glTexCoord1f (statement) sets the current texture coordinates.
@@ -383,7 +366,6 @@ _glT (OpenGL)
 
 
 _glV (OpenGL)
-
     _glVertex2d (statement) specifies a vertex.
     _glVertex2dv (statement) specifies a vertex.
     _glVertex2f (statement) specifies a vertex.

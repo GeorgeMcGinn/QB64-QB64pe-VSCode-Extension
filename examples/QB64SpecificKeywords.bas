@@ -1,144 +1,144 @@
 
 _A (QB64)
-_ACCEPTFILEDROP (statement) turns a program window into a valid drop destination for dragging files from Windows Explorer.
-_ACOS (function) arccosine function returns the angle in radians based on an input COSine value range from -1 to 1.
-_ACOSH (function) Returns the nonnegative arc hyperbolic cosine of x, expressed in radians.
-_ADLER32 (function) Returns the Adler-32 checksum of any arbitrary string.
-_ALLOWFULLSCREEN (statement) allows setting the behavior of the ALT+ENTER combo.
-_ALPHA (function) returns the alpha channel transparency level of a color value used on a screen page or image.
-_ALPHA32 (function) returns the alpha channel transparency level of a color value used on a 32 bit screen page or image.
-_ANDALSO (logical operator) performs short-circuiting logical conjunction on two expressions.
-_ARCCOT (function) is the inverse function of the cotangent.
-_ARCCSC (function) is the inverse function of the cosecant.
-_ARCSEC (function) is the inverse function of the secant.
-_ASIN (function) Returns the principal value of the arc sine of x, expressed in radians.
-_ASINH (function) Returns the arc hyperbolic sine of x, expressed in radians.
-_ASSERT (statement) Performs debug tests.
-$ASSERTS (metacommand) enables debug tests with the _ASSERT macro.
-_ATAN2 (function) Returns the principal value of the arc tangent of y/x, expressed in radians.
-_ATANH (function) Returns the arc hyperbolic tangent of x, expressed in radians.
-_AUTODISPLAY (statement) enables the automatic display of the screen image changes previously disabled by _DISPLAY.
-_AUTODISPLAY (function) returns the current display mode as true (-1) if automatic or false (0) if per request using _DISPLAY.
-_AXIS (function) returns a SINGLE value between -1 and 1 indicating the maximum distance from the device axis center, 
+    _ACCEPTFILEDROP (statement) turns a program window into a valid drop destination for dragging files from Windows Explorer.
+    _ACOS (function) arccosine function returns the angle in radians based on an input COSine value range from -1 to 1.
+    _ACOSH (function) Returns the nonnegative arc hyperbolic cosine of x, expressed in radians.
+    _ADLER32 (function) Returns the Adler-32 checksum of any arbitrary string.
+    _ALLOWFULLSCREEN (statement) allows setting the behavior of the ALT+ENTER combo.
+    _ALPHA (function) returns the alpha channel transparency level of a color value used on a screen page or image.
+    _ALPHA32 (function) returns the alpha channel transparency level of a color value used on a 32 bit screen page or image.
+    _ANDALSO (logical operator) performs short-circuiting logical conjunction on two expressions.
+    _ARCCOT (function) is the inverse function of the cotangent.
+    _ARCCSC (function) is the inverse function of the cosecant.
+    _ARCSEC (function) is the inverse function of the secant.
+    _ASIN (function) Returns the principal value of the arc sine of x, expressed in radians.
+    _ASINH (function) Returns the arc hyperbolic sine of x, expressed in radians.
+    _ASSERT (statement) Performs debug tests.
+    $ASSERTS (metacommand) enables debug tests with the _ASSERT macro.
+    _ATAN2 (function) Returns the principal value of the arc tangent of y/x, expressed in radians.
+    _ATANH (function) Returns the arc hyperbolic tangent of x, expressed in radians.
+    _AUTODISPLAY (statement) enables the automatic display of the screen image changes previously disabled by _DISPLAY.
+    _AUTODISPLAY (function) returns the current display mode as true (-1) if automatic or false (0) if per request using _DISPLAY.
+    _AXIS (function) returns a SINGLE value between -1 and 1 indicating the maximum distance from the device axis center, 
 
 
 _B (QB64)
-_BACKGROUNDCOLOR (function) returns the current background color for an image handle or page.
-_BASE64DECODE$ (function) Decodes a Base64-encoded string.
-_BASE64ENCODE$ (function) Encodes a string into Base64 format.
-_BIT (` numerical type) can return only signed values of 0 (bit off) and -1 (bit on). Unsigned 0 or 1.
-_BIN$ (function) returns the binary (base 2) STRING representation of the INTEGER part of any value.
-_BLEND (statement) statement turns on 32 bit alpha blending for the current image or screen mode and is default.
-_BLEND (function) returns -1 if enabled or 0 if disabled by _DONTBLEND statement.
-_BLINK (statement) statement turns blinking colors on/off in SCREEN 0
-_BLINK (function) returns -1 if enabled or 0 if disabled by _BLINK statement.
-_BLUE (function) function returns the palette or the blue component intensity of a 32-bit image color.
-_BLUE32 (function) returns the blue component intensity of a 32-bit color value.
-_BRIGHTNESS32 (function) returns the brightness value (HSB colorspace) of a given 32-bit ARGB color.
-_BUTTON (function) returns -1 when a controller device button is pressed and 0 when button is released.
-_BUTTONCHANGE (function) returns -1 when a device button has been pressed and 1 when released. Zero indicates no change.
-_BYTE (%% numerical type) can hold signed values from -128 to 127 (one byte or _BIT * 8). Unsigned from 0 to 255.
+    _BACKGROUNDCOLOR (function) returns the current background color for an image handle or page.
+    _BASE64DECODE$ (function) Decodes a Base64-encoded string.
+    _BASE64ENCODE$ (function) Encodes a string into Base64 format.
+    _BIT (numerical type) can return only signed values of 0 (bit off) and -1 (bit on). Unsigned 0 or 1.
+    _BIN$ (function) returns the binary (base 2) STRING representation of the INTEGER part of any value.
+    _BLEND (statement) statement turns on 32 bit alpha blending for the current image or screen mode and is default.
+    _BLEND (function) returns -1 if enabled or 0 if disabled by _DONTBLEND statement.
+    _BLINK (statement) statement turns blinking colors on/off in SCREEN 0
+    _BLINK (function) returns -1 if enabled or 0 if disabled by _BLINK statement.
+    _BLUE (function) function returns the palette or the blue component intensity of a 32-bit image color.
+    _BLUE32 (function) returns the blue component intensity of a 32-bit color value.
+    _BRIGHTNESS32 (function) returns the brightness value (HSB colorspace) of a given 32-bit ARGB color.
+    _BUTTON (function) returns -1 when a controller device button is pressed and 0 when button is released.
+    _BUTTONCHANGE (function) returns -1 when a device button has been pressed and 1 when released. Zero indicates no change.
+    _BYTE (%% numerical type) can hold signed values from -128 to 127 (one byte or _BIT * 8). Unsigned from 0 to 255.
 
 
 _C (QB64)
-_CAPSLOCK (function) returns -1 when Caps Lock is on
-_CAPSLOCK (statement) sets Caps Lock key state
-_CAST (function) performs a C-like cast of a numerical value to a specified numerical type.
-$CHECKING (metacommand) turns event and error checking OFF or ON.
-_CEIL (function) Rounds x upward, returning the smallest integral value that is not less than x.
-_CINP (function) Returns a key code from $CONSOLE input
-_CLAMP (function) Forces the given numeric value into a specific range.
-_CLEARCOLOR (function) returns the current transparent color of an image.
-_CLEARCOLOR (statement) sets a specific color index of an image to be transparent
-_CLIP (PUT graphics option) allows placement of an image partially off of the screen.
-_CLIPBOARD$ (function) returns the operating system's clipboard contents as a STRING.
-_CLIPBOARD$ (statement) sets and overwrites the STRING value in the operating system's clipboard.
-_CLIPBOARDIMAGE (function) pastes an image from the clipboard into a new QB64 image in memory.
-_CLIPBOARDIMAGE (statement) copies a valid QB64 image to the clipboard.
-$COLOR (metacommand) includes named color constants in a program.
-_COLORCHOOSERDIALOG (function) Displays a standard color picker dialog box and returns a 32-bit RGBA color selected by the user.
-_COMMANDCOUNT (function) returns the number of arguments passed to the compiled program from the command line.
-_CONNECTED (function) returns the status of a TCP/IP connection handle.
-_CONNECTIONADDRESS$ (TCP/IP function) returns a connected user's STRING IP address value using the handle.
-$CONSOLE (metacommand) creates a console window that can be used throughout a program.
-_CONSOLE (statement) used to turn a console window OFF or ON or to designate _DEST _CONSOLE for output.
-_CONSOLEINPUT (function) fetches input data from a $CONSOLE window to be read later (both mouse and keyboard)
-_CONSOLECURSOR (statement) is used to switch the text cursor in Console Windows off/on or change its size.
-_CONSOLEFONT (statement) is used to change the text font used in Console Windows or change its size.
-_CONSOLETITLE (statement) creates the title of the console window using a literal or variable string.
-_CONTINUE (statement) skips the remaining lines in a control block (DO/LOOP, FOR/NEXT or WHILE/WEND)
-_CONTROLCHR (statement) OFF allows the control characters to be used as text characters. ON (default) can use them as commands.
-_CONTROLCHR (function) returns the current state of _CONTROLCHR as 1 when OFF and 0 when ON.
-_COPYIMAGE (function) copies an image handle value to a new designated handle.
-_COPYPALETTE (statement) copies the color palette intensities from one 4 or 8 BPP image to another image.
-_COT (function) the mathematical function cotangent defined by 1/TAN.
-_COTH (function) Returns the hyperbolic cotangent.
-_COSH (function) Returns the hyperbolic cosine of x radians.
-_CRC32 (function) Returns the Crc-32 checksum of any arbitrary string.
-_CSC (function) the mathematical function cosecant defined by 1/SIN.
-_CSCH (function) Returns the hyperbolic cosecant.
-_CV (function) converts any _MK$ STRING value to the designated numerical type value.
-_CWD$ (function) returns the current working directory as a STRING value.
+    _CAPSLOCK (function) returns -1 when Caps Lock is on
+    _CAPSLOCK (statement) sets Caps Lock key state
+    _CAST (function) performs a C-like cast of a numerical value to a specified numerical type.
+    $CHECKING (metacommand) turns event and error checking OFF or ON.
+    _CEIL (function) Rounds x upward, returning the smallest integral value that is not less than x.
+    _CINP (function) Returns a key code from $CONSOLE input
+    _CLAMP (function) Forces the given numeric value into a specific range.
+    _CLEARCOLOR (function) returns the current transparent color of an image.
+    _CLEARCOLOR (statement) sets a specific color index of an image to be transparent
+    _CLIP (PUT graphics option) allows placement of an image partially off of the screen.
+    _CLIPBOARD$ (function) returns the operating system's clipboard contents as a STRING.
+    _CLIPBOARD$ (statement) sets and overwrites the STRING value in the operating system's clipboard.
+    _CLIPBOARDIMAGE (function) pastes an image from the clipboard into a new QB64 image in memory.
+    _CLIPBOARDIMAGE (statement) copies a valid QB64 image to the clipboard.
+    $COLOR (metacommand) includes named color constants in a program.
+    _COLORCHOOSERDIALOG (function) Displays a standard color picker dialog box and returns a 32-bit RGBA color selected by the user.
+    _COMMANDCOUNT (function) returns the number of arguments passed to the compiled program from the command line.
+    _CONNECTED (function) returns the status of a TCP/IP connection handle.
+    _CONNECTIONADDRESS$ (TCP/IP function) returns a connected user's STRING IP address value using the handle.
+    $CONSOLE (metacommand) creates a console window that can be used throughout a program.
+    _CONSOLE (statement) used to turn a console window OFF or ON or to designate _DEST _CONSOLE for output.
+    _CONSOLEINPUT (function) fetches input data from a $CONSOLE window to be read later (both mouse and keyboard)
+    _CONSOLECURSOR (statement) is used to switch the text cursor in Console Windows off/on or change its size.
+    _CONSOLEFONT (statement) is used to change the text font used in Console Windows or change its size.
+    _CONSOLETITLE (statement) creates the title of the console window using a literal or variable string.
+    _CONTINUE (statement) skips the remaining lines in a control block (DO/LOOP, FOR/NEXT or WHILE/WEND)
+    _CONTROLCHR (statement) OFF allows the control characters to be used as text characters. ON (default) can use them as commands.
+    _CONTROLCHR (function) returns the current state of _CONTROLCHR as 1 when OFF and 0 when ON.
+    _COPYIMAGE (function) copies an image handle value to a new designated handle.
+    _COPYPALETTE (statement) copies the color palette intensities from one 4 or 8 BPP image to another image.
+    _COT (function) the mathematical function cotangent defined by 1/TAN.
+    _COTH (function) Returns the hyperbolic cotangent.
+    _COSH (function) Returns the hyperbolic cosine of x radians.
+    _CRC32 (function) Returns the Crc-32 checksum of any arbitrary string.
+    _CSC (function) the mathematical function cosecant defined by 1/SIN.
+    _CSCH (function) Returns the hyperbolic cosecant.
+    _CV (function) converts any _MK$ STRING value to the designated numerical type value.
+    _CWD$ (function) returns the current working directory as a STRING value.
 
 
 _D (QB64)
-_D2G (function) converts degrees to gradient angle values.
-_D2R (function) converts degrees to radian angle values.
-$DEBUG (metacommand) enables debugging features, allowing you to step through your code line by line.
-_DECODEURL$ (function) returns the decoded plain text URL of the given encoded URL.
-_DEFAULTCOLOR (function) returns the current default (text/drawing) color for an image handle or page.
-_DEFINE (statement) defines a range of variable names according to their first character as a data type.
-_DEFLATE$ (function) Compresses a string.
-_DELAY (statement) suspends program execution for a SINGLE number of seconds.
-_DEPTHBUFFER (statement) enables, disables, locks or clears depth buffering.
-_DESKTOPHEIGHT (function) returns the height of the desktop (not program window).
-_DESKTOPWIDTH (function) returns the width of the desktop (not program window).
-_DEST (statement) sets the current write image or SCREEN page destination for prints or graphics.
-_DEST (function) returns the current destination screen page or image handle value.
-_DEVICE$ (function) returns a STRING expression listing a designated numbered input device name and types of input.
-_DEVICEINPUT (function) returns the _DEVICES number of an _AXIS, _BUTTON or _WHEEL event.
-_DEVICES (function) returns the number of input devices found on a computer system including the keyboard and mouse.
-_DIR$ (function) returns common paths in Windows only, like My Documents, My Pictures, My Music, Desktop.
-_DIREXISTS (function) returns -1 if the Directory folder name string parameter exists. Zero if it does not.
-_DISPLAY (statement) turns off the automatic display while only displaying the screen changes when called.
-_DISPLAY (function) returns the handle of the current image that is displayed on the screen.
-_DISPLAYORDER (statement) designates the order to render software, hardware and custom-opengl-code.
-_DONTBLEND (statement) statement turns off default _BLEND 32 bit alpha blending for the current image or screen.
-_DONTWAIT (SHELL action) specifies that the program should not wait until the shelled command/program is finished.
-_DROPPEDFILE (function) returns the list of items (files or folders) dropped in a program's window after _ACCEPTFILEDROP is enabled.
+    _D2G (function) converts degrees to gradient angle values.
+    _D2R (function) converts degrees to radian angle values.
+    $DEBUG (metacommand) enables debugging features, allowing you to step through your code line by line.
+    _DECODEURL$ (function) returns the decoded plain text URL of the given encoded URL.
+    _DEFAULTCOLOR (function) returns the current default (text/drawing) color for an image handle or page.
+    _DEFINE (statement) defines a range of variable names according to their first character as a data type.
+    _DEFLATE$ (function) Compresses a string.
+    _DELAY (statement) suspends program execution for a SINGLE number of seconds.
+    _DEPTHBUFFER (statement) enables, disables, locks or clears depth buffering.
+    _DESKTOPHEIGHT (function) returns the height of the desktop (not program window).
+    _DESKTOPWIDTH (function) returns the width of the desktop (not program window).
+    _DEST (statement) sets the current write image or SCREEN page destination for prints or graphics.
+    _DEST (function) returns the current destination screen page or image handle value.
+    _DEVICE$ (function) returns a STRING expression listing a designated numbered input device name and types of input.
+    _DEVICEINPUT (function) returns the _DEVICES number of an _AXIS, _BUTTON or _WHEEL event.
+    _DEVICES (function) returns the number of input devices found on a computer system including the keyboard and mouse.
+    _DIR$ (function) returns common paths in Windows only, like My Documents, My Pictures, My Music, Desktop.
+    _DIREXISTS (function) returns -1 if the Directory folder name string parameter exists. Zero if it does not.
+    _DISPLAY (statement) turns off the automatic display while only displaying the screen changes when called.
+    _DISPLAY (function) returns the handle of the current image that is displayed on the screen.
+    _DISPLAYORDER (statement) designates the order to render software, hardware and custom-opengl-code.
+    _DONTBLEND (statement) statement turns off default _BLEND 32 bit alpha blending for the current image or screen.
+    _DONTWAIT (SHELL action) specifies that the program should not wait until the shelled command/program is finished.
+    _DROPPEDFILE (function) returns the list of items (files or folders) dropped in a program's window after _ACCEPTFILEDROP is enabled.
 
 
 _E (QB64)
 _ECHO (statement) used in conjunction with $IF for the precompiler.
-$ELSE (metacommand) used in conjunction with $IF for the precompiler.
-$ELSEIF (metacommand) used in conjunction with $IF for the precompiler.
-$EMBED (metacommand) is used to embed any file's contents into the compiled executable.
-_EMBEDDED$ (function) recalls the contents of a file embedded using $EMBED.
-$END IF (metacommand) used in conjunction with $IF for the precompiler.
-_ENCODEURL$ (function) returns the so called percent encoded representation of the given URL.
-_ENVIRONCOUNT (function) returns the number of key/value pairs currently exist in the environment table.
-$ERROR (metacommand) used to trigger compiler errors from within the precompiling pass.
-_ERRORLINE (function) returns the source code line number that caused the most recent runtime error.
-_ERRORMESSAGE$ (function) returns a human-readable message describing the most recent runtime error.
-$EXEICON (metacommand) used with a .ICO icon file name to embed the image into the QB64 executable.
-_EXIT (function) prevents a user exit and indicates if a user has clicked the close X window button or CTRL + BREAK.
+    $ELSE (metacommand) used in conjunction with $IF for the precompiler.
+    $ELSEIF (metacommand) used in conjunction with $IF for the precompiler.
+    $EMBED (metacommand) is used to embed any file's contents into the compiled executable.
+    _EMBEDDED$ (function) recalls the contents of a file embedded using $EMBED.
+    $END IF (metacommand) used in conjunction with $IF for the precompiler.
+    _ENCODEURL$ (function) returns the so called percent encoded representation of the given URL.
+    _ENVIRONCOUNT (function) returns the number of key/value pairs currently exist in the environment table.
+    $ERROR (metacommand) used to trigger compiler errors from within the precompiling pass.
+    _ERRORLINE (function) returns the source code line number that caused the most recent runtime error.
+    _ERRORMESSAGE$ (function) returns a human-readable message describing the most recent runtime error.
+    $EXEICON (metacommand) used with a .ICO icon file name to embed the image into the QB64 executable.
+    _EXIT (function) prevents a user exit and indicates if a user has clicked the close X window button or CTRL + BREAK.
 
 
 _F (QB64)
-_FILEEXISTS (function) returns -1 if the file name string parameter exists. Zero if it does not.
-_FILES$ (function) returns a file or directory name that matches the specified pattern.
-_FINISHDROP (statement) resets _TOTALDROPPEDFILES and clears the _DROPPEDFILE list of items (files/folders).
-_FLOAT (numerical type ##) offers the maximum floating-point decimal precision available using QB64.
-_FONT (statement) sets the current font handle to be used by PRINT or _PRINTSTRING.
-_FONT (function) creates a new font handle from a designated image handle.
-_FONTHEIGHT (function) returns the current text or font height.
-_FONTWIDTH (function) returns the current text or font width.
-_FREEFONT (statement) releases the current font handle from memory.
-_FREEIMAGE (statement) releases a designated image handle from memory.
-_FREETIMER (function) returns an unused timer number value to use with ON TIMER(n).
-_FULLPATH$ (function) returns an absolute or full path name for the specified relative path name.
-_FULLSCREEN (statement) sets the program window to full screen or OFF. Alt + Enter does it manually.
-_FULLSCREEN (function) returns the fullscreen mode in use by the program.
+    _FILEEXISTS (function) returns -1 if the file name string parameter exists. Zero if it does not.
+    _FILES$ (function) returns a file or directory name that matches the specified pattern.
+    _FINISHDROP (statement) resets _TOTALDROPPEDFILES and clears the _DROPPEDFILE list of items (files/folders).
+    _FLOAT (numerical type ##) offers the maximum floating-point decimal precision available using QB64.
+    _FONT (statement) sets the current font handle to be used by PRINT or _PRINTSTRING.
+    _FONT (function) creates a new font handle from a designated image handle.
+    _FONTHEIGHT (function) returns the current text or font height.
+    _FONTWIDTH (function) returns the current text or font width.
+    _FREEFONT (statement) releases the current font handle from memory.
+    _FREEIMAGE (statement) releases a designated image handle from memory.
+    _FREETIMER (function) returns an unused timer number value to use with ON TIMER(n).
+    _FULLPATH$ (function) returns an absolute or full path name for the specified relative path name.
+    _FULLSCREEN (statement) sets the program window to full screen or OFF. Alt + Enter does it manually.
+    _FULLSCREEN (function) returns the fullscreen mode in use by the program.
 
 
 _G (QB64)
@@ -152,6 +152,26 @@ _G (QB64)
 _H (QB64)
     _HEIGHT (function) returns the height of a designated image handle.
     _HIDE (SHELL action) hides the command line display during a shell.
+    _ACCEPTFILEDROP (statement) turns a program window into a valid drop destination for dragging files from Windows Explorer.
+    _ACOS (function) arccosine function returns the angle in radians based on an input COSine value range from -1 to 1.
+    _ACOSH (function) Returns the nonnegative arc hyperbolic cosine of x, expressed in radians.
+    _ADLER32 (function) Returns the Adler-32 checksum of any arbitrary string.
+    _ALLOWFULLSCREEN (statement) allows setting the behavior of the ALT+ENTER combo.
+    _ALPHA (function) returns the alpha channel transparency level of a color value used on a screen page or image.
+    _ALPHA32 (function) returns the alpha channel transparency level of a color value used on a 32 bit screen page or image.
+    _ANDALSO (logical operator) performs short-circuiting logical conjunction on two expressions.
+    _ARCCOT (function) is the inverse function of the cotangent.
+    _ARCCSC (function) is the inverse function of the cosecant.
+    _ARCSEC (function) is the inverse function of the secant.
+    _ASIN (function) Returns the principal value of the arc sine of x, expressed in radians.
+    _ASINH (function) Returns the arc hyperbolic sine of x, expressed in radians.
+    _ASSERT (statement) Performs debug tests.
+    $ASSERTS (metacommand) enables debug tests with the _ASSERT macro.
+    _ATAN2 (function) Returns the principal value of the arc tangent of y/x, expressed in radians.
+    _ATANH (function) Returns the arc hyperbolic tangent of x, expressed in radians.
+    _AUTODISPLAY (statement) enables the automatic display of the screen image changes previously disabled by _DISPLAY.
+    _AUTODISPLAY (function) returns the current display mode as true (-1) if automatic or false (0) if per request using _DISPLAY.
+    _AXIS (function) returns a SINGLE value between -1 and 1 indicating the maximum distance from the device axis center, 
     _HSB32 (function) returns the 32-bit ARGB color value equivalent to the specified HSB colorspace values.
     _HSBA32 (function) returns the 32-bit ARGB color value equivalent to the specified HSB colorspace values + alpha channel.
     _HUE32 (function) returns the hue value (HSB colorspace) of a given 32-bit ARGB color.
@@ -371,7 +391,7 @@ _U (QB64)
 
 
 _V (QB64)
-    $VERSIONINFO (metacommand) adds metadata to Windows only binaries for identification purposes across the OS.
+    $VERSIONINFO:CompanyName= ($VERSIONINFO) (metacommand) adds metadata to Windows only binaries for identification purposes across the OS.
 
 
 _W (QB64)
