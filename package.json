@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/GeorgeMcGinn/qb64-vscode"
+    "url": "https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension"
   },
   "icon": "images/qb64.ico",
   "files": [
