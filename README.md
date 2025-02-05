@@ -1,15 +1,15 @@
 # QB64/QB64PE Language Support for Visual Studio Code
 
-This extension provides syntax highlighting and language support for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files) in Visual Studio Code.
+This extension provides an enhanced syntax highlighting and language support for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files) in Visual Studio Code.
 
 
 ## Features
 
-- Syntax highlighting for QB64/QB64PE and related Basic dialects (Conforms to QB64 Phoenix Edition v4.0.0)
+- Syntax highlighting for QB64/QB64PE and related Basic dialects (Conforms to QB64 Phoenix Edition v4.0.0 keywords)
 - Support for .bas, .bi, .bm, and .inc file extensions
 - Support for InForm .frm extensions (Future enhancement)
 - Custom dark theme optimized for QB64/QB64PE development
-- Language configuration for improved editing experience
+- Custom/enhanced highlighting scheme over QB64/pe IDE settings
 
 
 ## Requirements
@@ -20,41 +20,38 @@ If you have any requirements or dependencies, add a section describing those and
 
 This extension does not add any VS Code settings.
 
-## QB64 Syntax Highlighting Colors
+
+## QB64 Enhanced Syntax Highlighting Colors
 
 This table shows the colors used for various syntax elements in the QB64 extension.
 
-# QB64 Syntax Highlighting Colors
+- ![#569CD6](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-569CD6.png) **Keywords, Support functions, String processing, Error processing, File processing, Image processing, Device processing**
 
-This table shows the colors used for various syntax elements in the QB64 extension.
+- ![#23e4eb](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-23e4eb.png) **Screen**
 
-- ![#569CD6](images/colors/color-569CD6.png) **Keywords, Support functions, String processing, Error processing, File processing, Image processing, Device processing**
+- ![#faaa4e](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-faaa4e.png) **Double quoted strings** 
 
-- ![#23e4eb](images/colors/color-23e4eb.png) **Screen**
+- ![#4EC9B0](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-4EC9B0.png) **Storage and math functions**
 
-- ![#faaa4e](images/colors/color-faaa4e.png) **Double quoted strings** 
+- ![#f54129](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-f54129.png) **Graphics and OpenGL** 
 
-- ![#4EC9B0](images/colors/color-4EC9B0.png) **Storage and math functions**
+- ![#f0b411](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-f0b411.png) **Sound** 
 
-- ![#f54129](images/colors/color-f54129.png) **Graphics and OpenGL** 
+- ![#d611f0](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-d611f0.png) **Control, Conditional & Logical keywords**
 
-- ![#f0b411](images/colors/color-f0b411.png) **Sound** 
+- ![#f7f441](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-f7f441.png) **Numeric constants (Hex, Binary, Octal) (Bold)** 
 
-- ![#d611f0](images/colors/color-d611f0.png) **Control, Conditional & Logical keywords**
+- ![#f59324](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-f59324.png) **Debug keywords and functions**
 
-- ![#f7f441](images/colors/color-f7f441.png) **Numeric constants (Hex, Binary, Octal) (Bold)** 
+- ![#9eaa67](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-9eaa67.png) **User-defined functions (e.g., SUBs or FUNCTIONs)**
 
-- ![#f59324](images/colors/color-f59324.png) **Debug keywords and functions**
+- ![#00ff2a](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-00ff2a.png) **Meta commands (Versioninfo, Unstable, Include, etc.) (Bold)** 
 
-- ![#9eaa67](images/colors/color-9eaa67.png) **User-defined functions (e.g., SUBs or FUNCTIONs)**
+- ![#84e9a6](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-84e9a6.png) **Numeric processing, storage & conversions (Bold)**
 
-- ![#00ff2a](images/colors/color-00ff2a.png) **Meta commands (Versioninfo, Unstable, Include, etc.) (Bold)** 
+- ![#416347](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-416347.png) **Comment statements (Bold)**
 
-- ![#84e9a6](images/colors/color-84e9a6.png) **Numeric processing, storage & conversions (Bold)**
-
-- ![#416347](images/colors/color-416347.png) **Comment statements (Bold)**
-
-- ![#f84040](images/colors/color-f84040.png) **TCP/IP & Memory management keywords (Bold)**
+- ![#f84040](https://raw.githubusercontent.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/main/images/colors/color-f84040.png) **TCP/IP & Memory management keywords (Bold)**
 
 
 This should leave all variables, SUB and FUNCTION names white.
@@ -62,14 +59,14 @@ This should leave all variables, SUB and FUNCTION names white.
 
 ## Known Issues
 
-1. Using this extension will disable all other extensions. So if you have in your project .json or .md files, the colors used for this extension will be applied to them. For markdowm (.md) and C++ (.cpp, .h) files, no highlighting will be done. I can add this in the next release if desired.
+1. Using this extension will disable all other extensions. So if you have in your project .json or .md files, the colors used for this extension will be applied to them. For markdowm (.md) and C++ (.cpp, .h) files, no highlighting will be done. I can add this in a future release if desired.
 
 ## Release Notes
 
 ### 1.0.0 - Initial release of QB64/QB64PE Language Support
   - Syntax highlighting for QB64/QB64PE
   - Custom dark theme
-  - Language configuration
+
 
 
 ## Usage
@@ -86,7 +83,7 @@ To apply the custom QB64/QB64PE theme:
 
 ## Support
 
-For issues, feature requests, or questions, please visit the [GitHub repository](https://github.com/GeorgeMcGinn/qb64-vscode).
+For issues, feature requests, or questions, please visit the [GitHub repository](https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension).
 
 
 **Enjoy!**
