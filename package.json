@@ -2,7 +2,7 @@
   "name": "qb64-language",
   "displayName": "QB64/QB64PE",
   "description": "Syntax highlighting for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.74.0"
   },
