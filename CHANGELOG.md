@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Highlighting other files(like markdown, C/C++, Python, etc.)
 
 
+## [1.1.1] - 2025-02-16
+
+### Fixed language ID mismatches
+  - package.json and tasks.json had different language ID's. Fixed them to match.
+
+
 ## [1.1.0] - 2025-02-16 
 
 ### Added
@@ -25,3 +31,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
+[1.1.1]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/3#issue-2855754996
+[1.1.0]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/2#issue-2855621972
