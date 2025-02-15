@@ -2,7 +2,7 @@
   "name": "qb64-language",
   "displayName": "QB64/QB64PE",
   "description": "Syntax highlighting for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -31,8 +31,10 @@
     "themes/**"
   ],
   "main": "extension.js",
-    "activationEvents": ["onLanguage:qb64", "workspaceContains:**/*.{bas,bi,bm,inc}"],
+  "activationEvents": ["onLanguage:qb64", "workspaceContains:**/*.{bas,bi,bm,inc}"],
+
   "contributes": {
+
     "languages": [
       {
         "id": "qb64",
@@ -41,6 +43,7 @@
         "configuration": "./qb64-language-configuration.json"
       }
     ],
+
     "grammars": [
       {
         "language": "qb64",
@@ -54,7 +57,65 @@
         "uiTheme": "vs-dark",
         "path": "./themes/qb64-color-theme.json"
       }
-    ]
+    ],
+
+    "commands": [
+      {
+        "command": "basic.run",
+        "title": "Run BASIC Program",
+        "category": "BASIC"
+      },
+      {
+        "command": "basic.runQB64",
+        "title": "Run QB64",
+        "category": "BASIC"
+      },
+      {
+        "command": "basic.runQB64pe",
+        "title": "Run QB64pe",
+        "category": "BASIC"
+      },
+      {
+        "command": "basic.runWithSelection",
+        "title": "Run with Selection",
+        "category": "BASIC"
+      }
+    ],
+
+    "menus": {
+      "editor/title": [
+        {
+          "command": "basic.runQB64",
+          "group": "navigation",
+          "when": "resourceLangId == qb64"
+        },
+        {
+          "command": "basic.runQB64pe",
+          "group": "navigation",
+          "when": "resourceLangId == qb64"
+        }
+      ]
+    }
   },
-  "dependencies": {}
+
+    "configuration": {
+    "title": "QB64/QB64pe BASIC Extension",
+    "properties": {
+      "basic.defaultCompiler": {
+        "type": "string",
+        "default": "QB64pe",
+        "enum": ["QB64", "QB64pe"],
+        "description": "Select the default compiler for F5 quick run"
+      }
+    }
+  },
+
+  "keybindings": [
+    {
+      "command": "basic.run",
+      "key": "ctrl+F5",
+      "when": "editorLangId == basic",
+      "mac": "cmd+F5"
+    }
+  ]
 }

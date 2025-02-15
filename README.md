@@ -7,9 +7,9 @@ This extension provides an enhanced syntax highlighting and language support for
 
 - Syntax highlighting for QB64/QB64PE and related Basic dialects (Conforms to QB64 Phoenix Edition v4.0.0 keywords)
 - Support for .bas, .bi, .bm, and .inc file extensions
-- Support for InForm .frm extensions (Future enhancement)
 - Custom dark theme optimized for QB64/QB64PE development
 - Custom/enhanced highlighting scheme over QB64/pe IDE settings
+- Execute either QB64 or QB64pe compilers (must be defined in your PATH)
 
 
 ## Requirements
@@ -59,9 +59,13 @@ This should leave all variables, SUB and FUNCTION names white.
 
 ## Known Issues
 
-1. Using this extension will disable all other extensions. So if you have in your project .json or .md files, the colors used for this extension will be applied to them. For markdowm (.md) and C++ (.cpp, .h) files, no highlighting will be done. I can add this in a future release if desired.
+1. Using this extension will disable all other extensions. So if you have in your project .json or .md files, the colors used for this extension will be applied to them. For example, markdowm (.md) and C/C++ (.c, .cpp, .h) files, no highlighting will be done.
 
 ## Release Notes
+
+### 1.1.0 - Added compiler/run for QB64 & QB64PE
+  - Added compile & run for both QB64 and QB64pe compilers
+  - Updated ctrl-F5 to run either compiler (QB64/Qb64pe)
 
 ### 1.0.0 - Initial release of QB64/QB64PE Language Support
   - Syntax highlighting for QB64/QB64PE
@@ -79,6 +83,10 @@ To apply the custom QB64/QB64PE theme:
 1. Open the Command Palette (Ctrl+Shift+P)
 2. Type "Preferences: Color Theme"
 3. Select "QB64 Theme"
+
+To compile and run your program (either or):
+1. Select either "Run QB64" or "Run QB64pe" in upper right hand corner
+2. Hit ctrl-F5 and select top center your compiler
 
 
 ## Support
