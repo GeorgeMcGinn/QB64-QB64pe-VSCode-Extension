@@ -63,6 +63,9 @@ This should leave all variables, SUB and FUNCTION names white.
 
 ## Release Notes
 
+### 1.1.1 - Fix for language ID mismatches
+  - package.json and tasks.json had different language ID's. Fixed them to match.
+
 ### 1.1.0 - Added compiler/run for QB64 & QB64PE
   - Added compile & run for both QB64 and QB64pe compilers
   - Updated ctrl-F5 to run either compiler (QB64/Qb64pe)
