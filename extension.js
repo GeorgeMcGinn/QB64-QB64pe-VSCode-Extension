@@ -34,7 +34,7 @@ function activate(context) {
         }
     }
 
-    // Function to create .vscode folder and configuration files if they don't exist
+    // Function to create .vscode folder and configuration files if they don't exist or if they need updating
     const setupWorkspace = async () => {
         try {
             const workspaceFolders = vscode.workspace.workspaceFolders;
@@ -53,100 +53,112 @@ function activate(context) {
             const tasksPath = path.join(vscodeDir, 'tasks.json');
             const launchPath = path.join(vscodeDir, 'launch.json');
 
-            if (!fs.existsSync(tasksPath)) {
-                fs.writeFileSync(tasksPath, JSON.stringify({
-                    "version": "2.0.0",
-                    "tasks": [
-                        // QB64 build task
-                        {
-                            "label": "buildQB64",
-                            "type": "shell",
-                            "command": "qb64",
+            const tasksContent = {
+                "version": "2.0.0",
+                "tasks": [
+                    // QB64 build task
+                    {
+                        "label": "buildQB64",
+                        "type": "shell",
+                        "command": "qb64",
+                        "args": [
+                            "-x",
+                            "-p",
+                            "${file}",
+                            "-o",
+                            "${fileBasenameNoExtension}"
+                        ],
+                        "windows": {
+                            "command": "qb64.exe",
                             "args": [
                                 "-x",
                                 "-p",
                                 "${file}",
                                 "-o",
-                                "${fileBasenameNoExtension}"
-                            ],
-                            "windows": {
-                                "command": "qb64",
-                                "args": [
-                                    "-x",
-                                    "-p",
-                                    "${file}",
-                                    "-o",
-                                    "${fileBasenameNoExtension}.exe"
-                                ]
-                            },
-                            "problemMatcher": [],
-                            "group": {
-                                "kind": "build"
-                            }
+                                "${fileBasenameNoExtension}.exe"
+                            ]
                         },
-                        // QB64 run task
-                        {
-                            "label": "runQB64",
-                            "type": "shell",
-                            "command": "${fileDirname}/${fileBasenameNoExtension}",
-                            "windows": {
-                                "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
-                            },
-                            "options": {
-                                "cwd": "${fileDirname}"
-                            },
-                            "problemMatcher": [],
-                            "dependsOn": "buildQB64",
-                            "group": {
-                                "kind": "test"
-                            }
-                        },
-                        // QB64pe build task
-                        {
-                            "label": "buildQB64pe",
-                            "type": "shell",
-                            "command": "qb64pe",
-                            "args": [
-                                "-x",
-                                "-p",
-                                "${file}",
-                                "-o",
-                                "${fileBasenameNoExtension}"
-                            ],
-                            "windows": {
-                                "command": "qb64pe",
-                                "args": [
-                                    "-x",
-                                    "-p",
-                                    "${file}",
-                                    "-o",
-                                    "${fileBasenameNoExtension}.exe"
-                                ]
-                            },
-                            "problemMatcher": [],
-                            "group": {
-                                "kind": "build"
-                            }
-                        },
-                        // QB64pe run task
-                        {
-                            "label": "runQB64pe",
-                            "type": "shell",
-                            "command": "${fileDirname}/${fileBasenameNoExtension}",
-                            "windows": {
-                                "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
-                            },
-                            "options": {
-                                "cwd": "${fileDirname}"
-                            },
-                            "problemMatcher": [],
-                            "dependsOn": "buildQB64pe",
-                            "group": {
-                                "kind": "test"
-                            }
+                        "problemMatcher": [],
+                        "group": {
+                            "kind": "build"
                         }
-                    ]
-                }, null, 4));
+                    },
+                    // QB64 run task
+                    {
+                        "label": "runQB64",
+                        "type": "shell",
+                        "command": "${fileDirname}/${fileBasenameNoExtension}",
+                        "windows": {
+                            "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
+                        },
+                        "options": {
+                            "cwd": "${fileDirname}"
+                        },
+                        "problemMatcher": [],
+                        "dependsOn": "buildQB64",
+                        "group": {
+                            "kind": "test"
+                        }
+                    },
+                    // QB64pe build task
+                    {
+                        "label": "buildQB64pe",
+                        "type": "shell",
+                        "command": "qb64pe",
+                        "args": [
+                            "-x",
+                            "-p",
+                            "${file}",
+                            "-o",
+                            "${fileBasenameNoExtension}"
+                        ],
+                        "windows": {
+                            "command": "qb64pe.exe",
+                            "args": [
+                                "-x",
+                                "-p",
+                                "${file}",
+                                "-o",
+                                "${fileBasenameNoExtension}.exe"
+                            ]
+                        },
+                        "problemMatcher": [],
+                        "group": {
+                            "kind": "build"
+                        }
+                    },
+                    // QB64pe run task
+                    {
+                        "label": "runQB64pe",
+                        "type": "shell",
+                        "command": "${fileDirname}/${fileBasenameNoExtension}",
+                        "windows": {
+                            "command": "${fileDirname}/${fileBasenameNoExtension}.exe"
+                        },
+                        "options": {
+                            "cwd": "${fileDirname}"
+                        },
+                        "problemMatcher": [],
+                        "dependsOn": "buildQB64pe",
+                        "group": {
+                            "kind": "test"
+                        }
+                    }
+                ],
+                "extensionVersion": context.extension.packageJSON.version // Add this to track the extension version
+            };
+
+            if (fs.existsSync(tasksPath)) {
+                const existingTasks = JSON.parse(fs.readFileSync(tasksPath, 'utf8'));
+                if (existingTasks.extensionVersion !== tasksContent.extensionVersion) {
+                    fs.writeFileSync(tasksPath, JSON.stringify(tasksContent, null, 4));
+                    vscode.window.showInformationMessage('Updated workspace configuration files to match extension version.');
+                } else {
+                    console.log('Tasks.json is up to date with the current extension version.');
+                }
+            } else {
+                fs.writeFileSync(tasksPath, JSON.stringify(tasksContent, null, 4));
+                vscode.window.showInformationMessage('Workspace configuration files created.');
             }
 
             if (!fs.existsSync(launchPath)) {
@@ -163,7 +175,6 @@ function activate(context) {
                 }, null, 4));
             }
 
-            vscode.window.showInformationMessage('Workspace configuration files created.');
         } catch (error) {
             vscode.window.showErrorMessage(`Error setting up workspace: ${error.message}`);
         }
