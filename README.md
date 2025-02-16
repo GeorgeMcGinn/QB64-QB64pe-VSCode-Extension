@@ -63,6 +63,9 @@ This should leave all variables, SUB and FUNCTION names white.
 
 ## Release Notes
 
+### 1.1.2 - Fix for missing compiler function
+  - Updated to create the workspace .vscode directory to enable compiling option.
+
 ### 1.1.1 - Fix for language ID mismatches
   - package.json and tasks.json had different language ID's. Fixed them to match.
 
