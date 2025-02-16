@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Highlighting other files(like markdown, C/C++, Python, etc.)
 
 
+## [1.1.2] - 2025-02-16
+
+### Fixed missing workspace directory
+  - Added code to estension.json to create the workspace .vscode directory with launch.json and tasks.json to enable QB64/QB64pe compiles.
+
 ## [1.1.1] - 2025-02-16
 
 ### Fixed language ID mismatches
@@ -30,6 +35,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Conforms to QB64 Phoenix Edition v4.0.0
 
 
-
+[1.1.2]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/5#issue-2855833929
 [1.1.1]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/3#issue-2855754996
 [1.1.0]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/2#issue-2855621972
