@@ -13,7 +13,7 @@
                 "${fileBasenameNoExtension}"
             ],
             "windows": {
-                "command": "qb64",
+                "command": "qb64.exe",
                 "args": [
                     "-x",
                     "-p",
@@ -55,7 +55,7 @@
                 "${fileBasenameNoExtension}"
             ],
             "windows": {
-                "command": "qb64pe",
+                "command": "qb64pe.exe",
                 "args": [
                     "-x",
                     "-p",
@@ -85,5 +85,6 @@
                 "kind": "test"
             }
         }
-    ]
+    ],
+    "extensionVersion": "1.1.3"
 }

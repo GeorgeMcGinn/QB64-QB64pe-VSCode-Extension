@@ -2,7 +2,7 @@
   "name": "qb64-language",
   "displayName": "QB64/QB64PE",
   "description": "Syntax highlighting for QB64/QB64PE and related Basic dialects (.bas, .bi, .bm, .inc files)",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -16,7 +16,9 @@
     "QB64PE",
     "QB64 PE",
     "QB64PE Phoenix Edition",
-    "QBasic"
+    "QBasic",
+    "BASIC"
+
   ],
   "repository": {
     "type": "git",
