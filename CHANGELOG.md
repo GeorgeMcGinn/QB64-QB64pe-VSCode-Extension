@@ -41,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - QB64/QBasic/openGL keywords.
 - Conforms to QB64 Phoenix Edition v4.0.0
 
-[1.1.3]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/7
+[1.1.3]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/6
 [1.1.2]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/5
 [1.1.1]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/3
 [1.1.0]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/2
