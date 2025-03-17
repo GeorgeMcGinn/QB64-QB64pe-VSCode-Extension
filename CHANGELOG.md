@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Highlighting other files(like markdown, C/C++, Python, etc.)
 
 
+## [1.1.4] - 2025-03-17
+
+### Fixed
+  - Made changes to the args for the compiles so it does not display makefile commands, especially for qb64pe (clean up compiler messages).
+
 ## [1.1.3] - 2025-02-16
 
 ### Fixed
@@ -41,6 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - QB64/QBasic/openGL keywords.
 - Conforms to QB64 Phoenix Edition v4.0.0
 
+[1.1.4]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/6
 [1.1.3]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/6
 [1.1.2]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/5
 [1.1.1]: https://github.com/GeorgeMcGinn/QB64-QB64pe-VSCode-Extension/pull/3
