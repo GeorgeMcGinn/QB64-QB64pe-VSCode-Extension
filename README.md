@@ -63,6 +63,10 @@ This should leave all variables, SUB and FUNCTION names white.
 
 ## Release Notes
 
+
+### 1.1.4 - Not compiling in Windows
+  - Made changes to the args for the compiles so it does not display makefile commands, especially for qb64pe (clean up compiler messages).
+
 ### 1.1.3 - Not compiling in Windows
   - Updated to put .exe after qb64 and qb64pe for Windows.
   - Fixed the issue where the .vscode in workspace wasn't being recreated properly when extension changes.

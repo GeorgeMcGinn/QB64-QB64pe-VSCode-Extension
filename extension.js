@@ -63,7 +63,6 @@ function activate(context) {
                         "command": "qb64",
                         "args": [
                             "-x",
-                            "-p",
                             "${file}",
                             "-o",
                             "${fileBasenameNoExtension}"
@@ -72,7 +71,6 @@ function activate(context) {
                             "command": "qb64.exe",
                             "args": [
                                 "-x",
-                                "-p",
                                 "${file}",
                                 "-o",
                                 "${fileBasenameNoExtension}.exe"
@@ -107,7 +105,6 @@ function activate(context) {
                         "command": "qb64pe",
                         "args": [
                             "-x",
-                            "-p",
                             "${file}",
                             "-o",
                             "${fileBasenameNoExtension}"
@@ -116,7 +113,6 @@ function activate(context) {
                             "command": "qb64pe.exe",
                             "args": [
                                 "-x",
-                                "-p",
                                 "${file}",
                                 "-o",
                                 "${fileBasenameNoExtension}.exe"

@@ -128,7 +128,7 @@
 	  },
 	  {
 		"name": "math.functions.qb64",
- 		 "match": "(?i)\\b(ADD|ASC|ATN|CDBL|CINT|CLNG|COS|CSNG|EXP|ISNUMERIC|LOG|TAN|_ADLER32|_CRC32|_ACOS|_ACOSH|_ARCCOT|_ARCCSC|_ARCSEC|_ASIN|_ASINH|_ATAN2|_ATANH|_CEIL|_CLAMP|_COT|_COTH|_COSH|_CSC|_CSCH|_D2G|_D2R|_G2D|_G2R|_HYPOT|_MAX|_MIN|_PI|_R2D|_R2G|_ROUND|_SEC|_SECH|_SHL|_SHR|_SINH|_ROR|_ROL|EQV|IMP|VAL|ABS|_TANH)\\b"
+ 		 "match": "(?i)\\b(ADD|ASC|ATN|CDBL|CINT|CLNG|COS|CSNG|EXP|LOG|TAN|_ADLER32|_CRC32|_ACOS|_ACOSH|_ARCCOT|_ARCCSC|_ARCSEC|_ASIN|_ASINH|_ATAN2|_ATANH|_CEIL|_CLAMP|_COT|_COTH|_COSH|_CSC|_CSCH|_D2G|_D2R|_G2D|_G2R|_HYPOT|_MAX|_MIN|_PI|_R2D|_R2G|_ROUND|_SEC|_SECH|_SHL|_SHR|_SINH|_ROR|_ROL|EQV|IMP|VAL|ABS|_TANH)\\b"
 	  },
 	  {
 		"match": "(?i)\\b(STRING|INTEGER|LONG|_INTEGER64|_BIT|_BYTE|SINGLE|DOUBLE|_FLOAT|_OFFSET|_MEM|_UNSIGNED|_CAST|_ENVIRONCOUNT)\\b",
@@ -219,7 +219,7 @@
 			},
 			{
 				"name": "constant.numeric.hexadecimal.qb64",
-				"match": "&H[0-9A-Fa-f]+\\b"
+				"match": "(?i)&H[0-9A-F]+\\b"
 			},
 			{
 				"name": "constant.numeric.binary.qb64",
